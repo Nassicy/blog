@@ -1,0 +1,40 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "技术 博客",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-file-include": "^1.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-imagemin": "^3.1.0",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch-path": "^0.1.0",
+    "stream-combiner": "^0.2.2",
+    "gulp-sass-china": "^2.3.1"
+  },
+  "devDependencies": {
+    "stream-combiner2": "^1.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Nassicy/blog.git"
+  },
+  "keywords": [
+    "gulp",
+    "sass",
+    "blog"
+  ],
+  "author": "Nassicy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nassicy/blog/issues"
+  },
+  "homepage": "https://github.com/Nassicy/blog#readme"
+}

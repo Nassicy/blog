@@ -1,0 +1,184 @@
+/*
+* @Author: dongying
+* @Date:   2016-10-28 11:24:33
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-10-30 23:28:17
+*/
+body {
+  font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
+  box-sizing: border-box; }
+
+header#header {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-top: 3px solid #F5523F;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+  header#header > div.navbar-container {
+    width: 1190px;
+    margin: 0 auto; }
+    header#header > div.navbar-container > div.navbar-header {
+      margin-right: 40px; }
+      header#header > div.navbar-container > div.navbar-header img {
+        width: 100px;
+        height: 57px;
+        vertical-align: middle; }
+    header#header > div.navbar-container nav.nav {
+      float: right; }
+      header#header > div.navbar-container nav.nav li.nav-item {
+        float: left; }
+        header#header > div.navbar-container nav.nav li.nav-item > a {
+          display: inline-block;
+          height: 57px;
+          line-height: 57px;
+          vertical-align: middle;
+          color: #333;
+          padding: 0 15px;
+          margin-right: 16px;
+          background-color: #fff; }
+          header#header > div.navbar-container nav.nav li.nav-item > a:hover {
+            color: #fff;
+            background: #F5523F;
+            text-decoration: none;
+            transition: all .3s; }
+        header#header > div.navbar-container nav.nav li.nav-item a.login {
+          margin-top: 14px;
+          height: 30px;
+          line-height: 30px;
+          vertical-align: middle;
+          color: #000;
+          border: 1px solid #d52222;
+          border-radius: 4px; }
+          header#header > div.navbar-container nav.nav li.nav-item a.login:hover {
+            color: #fff;
+            background-color: #d52222;
+            cursor: pointer; }
+      header#header > div.navbar-container nav.nav li.search > a.searchLink {
+        position: relative; }
+        header#header > div.navbar-container nav.nav li.search > a.searchLink > i.fa-search {
+          position: absolute;
+          top: 24px;
+          left: 30px;
+          color: #999; }
+        header#header > div.navbar-container nav.nav li.search > a.searchLink > input {
+          width: 200px;
+          height: 30px;
+          line-height: 30px;
+          text-indent: 40px;
+          border-radius: 20px; }
+        header#header > div.navbar-container nav.nav li.search > a.searchLink:hover {
+          color: #000;
+          background-color: #fff; }
+
+#main .carousel-container {
+  width: 100%;
+  padding: 0;
+  margin-top: 20px; }
+  #main .carousel-container a.banner-anchor {
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    text-indent: -90em;
+    background-repeat: no-repeat;
+    background-color: #14191e;
+    border-radius: 6px;
+    opacity: 0.8; }
+    #main .carousel-container a.banner-anchor:hover {
+      background-color: #14191e;
+      opacity: 0.5; }
+  #main .carousel-container a.prev,
+  #main .carousel-container a.next {
+    position: absolute;
+    top: 50%;
+    height: 60px;
+    width: 60px;
+    background-image: url(../images/pre.png);
+    background-position: center; }
+  #main .carousel-container a.prev {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    z-index: 1;
+    margin-left: 10px; }
+  #main .carousel-container a.next {
+    right: 10px; }
+#main .rec-container {
+  width: 1190px;
+  margin: 20px auto;
+  display: flex;
+  display: -webkit-flex;
+  flex-decoration: column;
+  justify-content: space-between; }
+  #main .rec-container > .rec-box {
+    width: 390px;
+    height: 440px;
+    -webkit-animation: floorShow .3s 0s both;
+    -moz-animation: floorShow .3s 0s both;
+    animation: floorShow .3s 0s both; }
+    #main .rec-container > .rec-box > .rec-header {
+      position: relative;
+      height: 55px;
+      line-height: 55px;
+      color: #fff;
+      background-color: #4998a1;
+      padding-right: 20px; }
+      #main .rec-container > .rec-box > .rec-header i.box-icon-arrow {
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 20px solid #fff;
+        border-right: 20px solid transparent; }
+      #main .rec-container > .rec-box > .rec-header i:nth-of-type(2) {
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../images/icon.png");
+        background-size: 218px 188px;
+        -moz-background-size: 218px 188px;
+        background-repeat: no-repeat; }
+      #main .rec-container > .rec-box > .rec-header > h4 {
+        display: inline-block; }
+      #main .rec-container > .rec-box > .rec-header > a {
+        float: right;
+        color: #fff;
+        text-align: right; }
+        #main .rec-container > .rec-box > .rec-header > a:hover {
+          text-decoration: none;
+          cursor: pointer; }
+    #main .rec-container > .rec-box div.rec-first {
+      background-image: -webkit-linear-gradient(left, #4998a1, #2e828b);
+      background-image: -moz-linear-gradient(left, #4998a1, #2e828b);
+      background-image: linear-gradient(90deg, #4998a1, #2e828b); }
+      #main .rec-container > .rec-box div.rec-first > i.box-icon-first {
+        background-position: -190px -96px;
+        width: 24px;
+        height: 24px; }
+    #main .rec-container > .rec-box div.rec-second {
+      background: #7d2e5c;
+      background-image: -webkit-linear-gradient(left, #7d2e5c, #6f184a);
+      background-image: -moz-linear-gradient(left, #7d2e5c, #6f184a);
+      background-image: linear-gradient(90deg, #7d2e5c, #6f184a); }
+      #main .rec-container > .rec-box div.rec-second > i.box-icon-second {
+        background-position: 0 -160px;
+        width: 24px;
+        height: 24px; }
+    #main .rec-container > .rec-box div.rec-third {
+      background: #e77005;
+      background-image: -webkit-linear-gradient(left, #e77005, #e45d04);
+      background-image: -moz-linear-gradient(left, #e77005, #e45d04);
+      background-image: linear-gradient(90deg, #e77005, #e45d04); }
+      #main .rec-container > .rec-box div.rec-third > i.box-icon-third {
+        background-position: -190px 0;
+        width: 24px;
+        height: 24px; }
+    #main .rec-container > .rec-box > .rec-content {
+      height: 360px;
+      border: 1px solid #ccc; }
+
+/*# sourceMappingURL=layout.css.map */
