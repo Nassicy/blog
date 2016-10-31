@@ -1,0 +1,140 @@
+/*
+* @Author: dongying
+* @Date:   2016-10-28 11:24:33
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-10-28 18:00:12
+*/
+$header-height:60px;
+$header-bg:#fff;
+$header-border-color:#F5523F;
+$header-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+$banner-anchor-width:60px;
+body{
+    font-family: Helvetica,Arial,"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei","tohoma,sans-serif";
+    box-sizing:border-box;
+}
+/*头部*/
+
+header#header{
+    width:100%;
+    height:$header-height;
+    background:$header-bg;
+    border-top: 3px solid $header-border-color;
+    box-shadow:$header-box-shadow;
+    >div.navbar-container{
+        width:900px;
+        margin:0 auto;
+        >div.navbar-header{
+            margin-right:40px;
+            img{
+                width:100px;
+                height:$header-height /6*5.7;
+                vertical-align:middle;
+            }
+        }
+        nav.nav{
+            float:left;
+            li.nav-item{
+                float:left;
+                >a{
+                    display:inline-block;
+                    height:57px;
+                    line-height:57px;
+                    vertical-align:middle;
+                    color: #333;
+                    padding:0 15px;
+                    margin-right:16px;
+                    background-color: $header-bg;
+                    &:hover{
+                        color:#fff;
+                        background:$header-border-color;
+                        text-decoration:none;
+                        transition: all .3s;
+                    }
+                }
+                a.login{
+                    margin-top:14px;
+                    height:30px;
+                    line-height:30px;
+                    vertical-align:middle;
+                    color:#000;
+                    border:1px solid #d52222;
+                    border-radius:4px;
+                    &:hover{
+                        color:#fff;
+                        background-color:#d52222;
+                        cursor:pointer;
+                    }
+                }
+            }
+            li.search{
+                >a.searchLink{
+                    position:relative;
+                    >i.fa-search{
+                        position:absolute;
+                        top:24px;
+                        left:30px;
+                        color:#999;
+                    }
+                    >input{
+                        width:200px;
+                        height:30px;
+                        line-height:30px;
+                        text-indent:40px;
+                        border-radius:20px;
+                    }
+                    &:hover{
+                        color:#000;
+                        background-color:$header-bg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*主体内容*/
+#main{
+
+    /*轮播图*/
+    .carousel-container{
+        width:100%;
+        padding:0;
+        margin-top:20px;
+        a.banner-anchor{
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            width:$banner-anchor-width;
+            height:$banner-anchor-width;
+            overflow: hidden;
+            text-indent: -90em;
+            background-repeat: no-repeat;
+            background-color:#14191e;
+            border-radius:6px;
+            opacity:0.8;
+            &:hover{
+                background-color:#14191e;
+                opacity:0.5;
+            }
+        }
+        a.prev,a.next{
+            position: absolute;
+            top: 50%;
+            height: $banner-anchor-width;
+            width: $banner-anchor-width;
+            background-image: url(../images/pre.png);
+            background-position: center;
+        }
+        a.prev{
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            z-index:1;
+            margin-left:10px;
+        }
+        a.next{
+            right: 10px;
+           }
+    }
+}

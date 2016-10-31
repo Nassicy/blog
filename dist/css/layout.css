@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/*
+* @Author: dongying
+* @Date:   2016-10-28 11:24:33
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-10-28 18:00:12
+*/
+body {
+  font-family: Helvetica,Arial,"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei","tohoma,sans-serif";
+  box-sizing: border-box; }
+
+/*头部*/
+header#header {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-top: 3px solid #F5523F;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+  header#header > div.navbar-container {
+    width: 900px;
+    margin: 0 auto; }
+    header#header > div.navbar-container > div.navbar-header {
+      margin-right: 40px; }
+      header#header > div.navbar-container > div.navbar-header img {
+        width: 100px;
+        height: 57px;
+        vertical-align: middle; }
+    header#header > div.navbar-container nav.nav {
+      float: left; }
+      header#header > div.navbar-container nav.nav li.nav-item {
+        float: left; }
+        header#header > div.navbar-container nav.nav li.nav-item > a {
+          display: inline-block;
+          height: 57px;
+          line-height: 57px;
+          vertical-align: middle;
+          color: #333;
+          padding: 0 15px;
+          margin-right: 16px;
+          background-color: #fff; }
+          header#header > div.navbar-container nav.nav li.nav-item > a:hover {
+            color: #fff;
+            background: #F5523F;
+            text-decoration: none;
+            transition: all .3s; }
+        header#header > div.navbar-container nav.nav li.nav-item a.login {
+          margin-top: 14px;
+          height: 30px;
+          line-height: 30px;
+          vertical-align: middle;
+          color: #000;
+          border: 1px solid #d52222;
+          border-radius: 4px; }
+          header#header > div.navbar-container nav.nav li.nav-item a.login:hover {
+            color: #fff;
+            background-color: #d52222;
+            cursor: pointer; }
+      header#header > div.navbar-container nav.nav li.search > a.searchLink {
+        position: relative; }
+        header#header > div.navbar-container nav.nav li.search > a.searchLink > i.fa-search {
+          position: absolute;
+          top: 24px;
+          left: 30px;
+          color: #999; }
+        header#header > div.navbar-container nav.nav li.search > a.searchLink > input {
+          width: 200px;
+          height: 30px;
+          line-height: 30px;
+          text-indent: 40px;
+          border-radius: 20px; }
+        header#header > div.navbar-container nav.nav li.search > a.searchLink:hover {
+          color: #000;
+          background-color: #fff; }
+
+/*主体内容*/
+#main {
+  /*轮播图*/ }
+  #main .carousel-container {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px; }
+    #main .carousel-container a.banner-anchor {
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      text-indent: -90em;
+      background-repeat: no-repeat;
+      background-color: #14191e;
+      border-radius: 6px;
+      opacity: 0.8; }
+      #main .carousel-container a.banner-anchor:hover {
+        background-color: #14191e;
+        opacity: 0.5; }
+    #main .carousel-container a.prev, #main .carousel-container a.next {
+      position: absolute;
+      top: 50%;
+      height: 60px;
+      width: 60px;
+      background-image: url(../images/pre.png);
+      background-position: center; }
+    #main .carousel-container a.prev {
+      transform: rotate(180deg);
+      z-index: 1;
+      margin-left: 10px; }
+    #main .carousel-container a.next {
+      right: 10px; }
+
+/*# sourceMappingURL=layout.css.map */
+
+/*# sourceMappingURL=layout.css.map */
