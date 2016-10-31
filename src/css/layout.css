@@ -3,7 +3,7 @@
 * @Author: dongying
 * @Date:   2016-10-28 11:24:33
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-10-28 18:00:12
+* @Last Modified time: 2016-10-31 15:58:35
 */
 body {
   font-family: Helvetica,Arial,"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei","tohoma,sans-serif";
@@ -17,7 +17,7 @@ header#header {
   border-top: 3px solid #F5523F;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
   header#header > div.navbar-container {
-    width: 900px;
+    width: 1190px;
     margin: 0 auto; }
     header#header > div.navbar-container > div.navbar-header {
       margin-right: 40px; }
@@ -109,5 +109,44 @@ header#header {
       margin-left: 10px; }
     #main .carousel-container a.next {
       right: 10px; }
+
+/*底部*/
+footer#footer {
+  /* display:flex;
+  display:-webkit-flex;
+  display-direction:column; */
+  height: 120px;
+  margin-top: 20px;
+  color: #fff;
+  background-color: rgba(7, 17, 27, 0.8); }
+  footer#footer > .footer-container {
+    width: 1190px;
+    margin: 0 auto; }
+    footer#footer > .footer-container ul li {
+      height: 36px;
+      line-height: 36px; }
+      footer#footer > .footer-container ul li i {
+        font-size: 16px; }
+      footer#footer > .footer-container ul li a {
+        color: #fff; }
+        footer#footer > .footer-container ul li a:hover {
+          text-decoration: none; }
+    footer#footer > .footer-container ul li:nth-of-type(1) {
+      margin-top: 10px; }
+    footer#footer > .footer-container > .footer-left {
+      float: left;
+      width: 400px;
+      margin-right: 20px; }
+      footer#footer > .footer-container > .footer-left li.friend-link {
+        border-bottom: 1px solid #fff; }
+        footer#footer > .footer-container > .footer-left li.friend-link label {
+          margin-right: 10px; }
+        footer#footer > .footer-container > .footer-left li.friend-link a {
+          margin-right: 10px; }
+    footer#footer > .footer-container > .footer-right {
+      float: right;
+      margin-right: 60px; }
+      footer#footer > .footer-container > .footer-right i {
+        margin-right: 10px; }
 
 /*# sourceMappingURL=layout.css.map */

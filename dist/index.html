@@ -1,72 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>首页</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="css/base.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/layout.css">
-    </head>
-    <body>
-        <header id="header" class="">
-            <div class="navbar-container">
-                <div class="navbar-header">
-                    <a href="index.html">
-                        <img src="images/logo.gif" alt="logo" />
-                    </a>
-                </div>
-                <nav class="nav">
-                    <ul>
-                        <li class="nav-item"><a href="index.html" title="首页">首页</a></li>
-                        <li class="nav-item"><a href="index.html" title="前端">前端</a></li>
-                        <li class="nav-item"><a href="index.html" title="Java">Java</a></li>
-                        <li class="nav-item"><a href="index.html" title="数据库">数据库</a></li>
-                        <li class="nav-item"><a href="index.html" title="关于我">关于我</a></li>
-                        <!-- 搜索按钮[[ -->
-                        <li class="search nav-item">
-                            <a class="searchLink">
-                                <i class="fa fa-search"></i>
-                                <input type="text" placeholder="search here.." class="searchWhat">
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="login">登录</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header><!-- /header -->
-        <main id="main">
-            <section class=" carousel-container">
-                <div id="myCarousel" class="carousel slide">
-                   <!-- 轮播（Carousel）指标 -->
-                   <ol class="carousel-indicators">
-                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#myCarousel" data-slide-to="1"></li>
-                   </ol>
-                   <!-- 轮播（Carousel）项目 -->
-                   <div class="carousel-inner">
-                      <div class="item active">
-                         <img src="images/banner1.png" alt="First slide">
-                      </div>
-                      <div class="item">
-                         <img src="images/banner2.png" alt="Second slide">
-                      </div>
-                   </div>
-                    <!-- 轮播（Carousel）导航 -->
-                    <a class="banner-anchor prev" href="#myCarousel"
-                      data-slide="prev">&lsaquo;</a>
-                    <a class="banner-anchor next" href="#myCarousel"
-                      data-slide="next">&rsaquo;</a>
-                </div>
-            </section >
-            <section class="rec-container"></section>
-        </main>
-        <footer id="footer">
 
-        </footer>
-    </body>
-    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
-    <script type="text/javascript" src="js/carousel.js"></script>
+<head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+
+<body>
+    <header id="header" class="">
+        <div class="navbar-container">
+            <div class="navbar-header">
+                <a href="index.html">
+                    <img src="images/logo.gif" alt="logo" />
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li class="nav-item"><a href="index.html" title="首页">首页</a></li>
+                    <li class="nav-item"><a href="index.html" title="前端">前端</a></li>
+                    <li class="nav-item"><a href="index.html" title="Java">Java</a></li>
+                    <li class="nav-item"><a href="index.html" title="数据库">数据库</a></li>
+                    <li class="nav-item"><a href="index.html" title="关于我">关于我</a></li>
+                    <!-- 搜索按钮[[ -->
+                    <li class="search nav-item">
+                        <a class="searchLink">
+                            <i class="fa fa-search"></i>
+                            <input type="text" placeholder="search here.." class="searchWhat">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="login">登录</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- /header -->
+    <main id="main">
+        <section class=" carousel-container">
+            <div id="myCarousel" class="carousel slide">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/banner1.png" alt="First slide">
+                    </div>
+                    <div class="item">
+                        <img src="images/banner2.png" alt="Second slide">
+                    </div>
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="banner-anchor prev" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="banner-anchor next" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            </div>
+        </section>
+        <section class="rec-container"></section>
+    </main>
+    <footer id="footer">
+        <section class="footer-container">
+            <ul class="footer-left">
+            <li class="friend-link">
+               <label>友情链接:</label>
+               <a href="http://www.imooc.com/">慕课网</a>
+            </li>
+            <li>
+                <p>Copyright &copy;2016 遇见更好地自己</p>
+            </li>
+        </ul>
+        <ul class="footer-right">
+            <li>
+                <i class="fa fa-qq"></i>
+                <a href="javascript:void(0)"></a>
+            </li>
+            <li>
+                <i class="fa fa-weibo"></i>
+                <a href="javascript:void(0)"></a>
+            </li>
+            <li>
+                <i class="fa  fa-github"></i>
+                <a href="javascript:void(0)">https://github.com/Nassicy</a>
+            </li>
+        </ul>
+        </section>
+    </footer>
+</body>
+<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+
 </html>

@@ -2,13 +2,14 @@
 * @Author: dongying
 * @Date:   2016-10-28 11:24:33
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-10-28 18:00:12
+* @Last Modified time: 2016-10-31 15:58:35
 */
 $header-height:60px;
 $header-bg:#fff;
 $header-border-color:#F5523F;
 $header-box-shadow: 0 1px 3px rgba(0,0,0,.1);
 $banner-anchor-width:60px;
+$page-width:1190px;
 body{
     font-family: Helvetica,Arial,"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei","tohoma,sans-serif";
     box-sizing:border-box;
@@ -22,7 +23,7 @@ header#header{
     border-top: 3px solid $header-border-color;
     box-shadow:$header-box-shadow;
     >div.navbar-container{
-        width:900px;
+        width:$page-width;
         margin:0 auto;
         >div.navbar-header{
             margin-right:40px;
@@ -136,5 +137,58 @@ header#header{
         a.next{
             right: 10px;
            }
+    }
+}
+/*底部*/
+footer#footer{
+    /* display:flex;
+    display:-webkit-flex;
+    display-direction:column; */
+    height:120px;
+    margin-top:20px;
+    color:#fff;
+    background-color:rgba(7, 17, 27, 0.8);
+    >.footer-container{
+        width:$page-width;
+        margin:0 auto;
+        ul{
+            li{
+                height:36px;
+                line-height:36px;
+                i{
+                    font-size:16px;
+                }
+                a{
+                    color:#fff;
+                    &:hover{
+                        text-decoration:none;
+                    }
+                }
+            }
+            li:nth-of-type(1){
+                margin-top:10px;
+            }
+        }
+        >.footer-left{
+            float:left;
+            width:400px;
+            margin-right:20px;
+            li.friend-link{
+                border-bottom:1px solid #fff;
+                label{
+                    margin-right:10px;
+                }
+                a{
+                    margin-right:10px;
+                }
+            }
+        }
+        >.footer-right{
+            float:right;
+            margin-right:60px;
+            i{
+                margin-right:10px;
+            }
+        }
     }
 }

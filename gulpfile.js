@@ -41,7 +41,7 @@ gulp.task('server',function(){
 
 //监听html
 gulp.task("watchHtml",function(){
-     gulp.watch('src/html/**/*.html',function(event){
+     gulp.watch(['src/html/**/*.html','src/index.html'],function(event){
         var paths=watchPath(event,'src','dist/');
         gutil.log(gutil.colors.green(event.type) + ' ' + paths.srcPath)
         gutil.log('Dist ' + paths.distPath);
