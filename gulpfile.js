@@ -1,13 +1,16 @@
+
 /*
 * @Author: dongying
 * @Date:   2016-10-15 22:22:02
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-10-30 22:07:26
+* @Last Modified time: 2016-10-31 23:08:21
 */
 
+
+'use strict';
 var gulp=require("gulp");
 var browserSync=require("browser-sync").create();
-var fileinClude=require("gulp-file-include");
+
 var imagemin=require("gulp-imagemin");
 var minifyCss=require("gulp-minify-css");
 var sass=require("gulp-sass-china");
@@ -16,6 +19,7 @@ var uglify=require("gulp-uglify");
 var gutil=require("gulp-util");
 var watchPath=require("gulp-watch-path");
 var streamCombiner=require("stream-combiner2");
+var autoprefixer=require("gulp-autoprefixer");
 
 //控制台颜色
 var handleError=function(err){
@@ -46,6 +50,7 @@ gulp.task('server',function(){
 })
 
 //编写普通的转化任务
+
 //监听html
 gulp.task("watchHtml",function(){
      gulp.watch(['src/html/**/*.html','src/index.html'],function(event){
@@ -60,10 +65,21 @@ gulp.task("watchIndex",function(){
     gulp.src('src/index.html')
         .pipe(gulp.dest('dist/'));
 })
+
+gulp.task("index",function(){
+    gulp.src('src/index.html')
+        .pipe(gulp.dest('dist/'))
+    })
+
 //编译css
 gulp.task("minifyCss",function(){
     gulp.src(['src/css/**/*','!src/css/include/*.css'])
         .pipe(sourcemaps.init())
+        .pipe(autoprefixer({
+            browsers:'last 2 versions',
+            cascade:true,
+            remove:true
+        }))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('dist/css/'));
 });
@@ -74,6 +90,11 @@ gulp.task('watchcss', function () {
         gutil.log('Dist ' + paths.distPath)
         gulp.src(paths.srcPath)
             .pipe(sourcemaps.init())
+            .pipe(autoprefixer({
+              browsers: 'last 2 versions',
+              cascade:true,
+              remove:true
+            }))
             //.pipe(minifycss())
             .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest(paths.distDir))
@@ -83,6 +104,8 @@ gulp.task('watchcss', function () {
 gulp.task('watchsass',function(){
     gulp.watch('src/sass/*.scss',function(event){
         var paths=watchPath(event,'src/','dist/');
+
+        var paths=watchPath(event,'src','dist/');
         gutil.log(gutil.colors.green(event.type)+''+paths.srcPath);
         gutil.log('Dist '+paths.distPath);
         sass(paths.srcPath)
@@ -90,6 +113,11 @@ gulp.task('watchsass',function(){
                 console.error('Error!',err.message);
                 })
             .pipe(sourcemaps.init())
+            .pipe(autoprefixer({
+                browsers:'last 2 versions',
+                cascade:true,
+                remove:true
+                }))
             .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest(paths.distDir))
         })
@@ -102,6 +130,9 @@ gulp.task("uglifyJs",function(){
         sourcemaps.init(),
         uglify(),
         sourcemaps.write('./'),
+        //sourcemaps.init(),
+        //uglify(),
+        //sourcemaps.write('./'),
         gulp.dest('dist/js/')
     ])
     combined.on('error',handleError);
@@ -129,3 +160,4 @@ gulp.task("watch",function(){
 })
 
 gulp.task('default',['watchHtml','minifyCss','uglifyJs','image','copyFonts','watchsass','watchcss','server','watch','watchIndex']);
+
