@@ -3,7 +3,7 @@
 * @Author: dongying
 * @Date:   2016-10-15 22:22:02
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-10-31 23:08:21
+* @Last Modified time: 2016-11-01 15:51:32
 */
 
 
@@ -61,10 +61,6 @@ gulp.task("watchHtml",function(){
             .pipe(gulp.dest(paths.distDir))
     })
 })
-gulp.task("watchIndex",function(){
-    gulp.src('src/index.html')
-        .pipe(gulp.dest('dist/'));
-})
 
 gulp.task("index",function(){
     gulp.src('src/index.html')
@@ -104,8 +100,6 @@ gulp.task('watchcss', function () {
 gulp.task('watchsass',function(){
     gulp.watch('src/sass/*.scss',function(event){
         var paths=watchPath(event,'src/','dist/');
-
-        var paths=watchPath(event,'src','dist/');
         gutil.log(gutil.colors.green(event.type)+''+paths.srcPath);
         gutil.log('Dist '+paths.distPath);
         sass(paths.srcPath)
@@ -127,7 +121,7 @@ gulp.task('watchsass',function(){
 gulp.task("uglifyJs",function(){
     var combined=streamCombiner.obj([
         gulp.src('src/js/**/*'),
-        sourcemaps.init(),
+       // sourcemaps.init(),
         uglify(),
         sourcemaps.write('./'),
         //sourcemaps.init(),
@@ -159,5 +153,5 @@ gulp.task("watch",function(){
     gulp.watch('dist/**/*.*').on('change', browserSync.reload);
 })
 
-gulp.task('default',['watchHtml','minifyCss','uglifyJs','image','copyFonts','watchsass','watchcss','server','watch','watchIndex']);
+gulp.task('default',['watchHtml','minifyCss','uglifyJs','image','copyFonts','watchsass','watchcss','server','watch','index']);
 

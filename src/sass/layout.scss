@@ -2,7 +2,7 @@
 * @Author: dongying
 * @Date:   2016-10-28 11:24:33
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-10-31 23:07:17
+* @Last Modified time: 2016-11-01 19:12:49
 */
 
 $header-height:60px;
@@ -27,7 +27,7 @@ header#header{
         width:$page-container-width;
         margin:0 auto;
         >div.navbar-header{
-            margin-right:40px;
+            margin-right:100px;
             img{
                 width:100px;
                 height:$header-height /6*5.7;
@@ -138,7 +138,91 @@ header#header{
             right: 10px;
         }
     }
-    .rec-container{
+    /*美文赏析*/
+    section.about-main{
+        width:$page-container-width;
+        margin:20px auto;
+        >article.about-left{
+            float:left;
+            width:750px;
+            h5{
+                width:100px;
+                margin:0 auto;
+                text-align:center;
+                color:#999;
+                border-bottom:1px solid #999;
+            }
+            h4{
+                text-align:center;
+            }
+            >div.article-content{
+                p{
+                    line-height:26px;
+                    margin-top:10px;
+                    span{
+                        color:#CD5C5C;
+                        margin-right:10px;
+                    }
+                }
+                a{
+                    img{
+                        width:100%;
+                        border-radius:6px;
+                    }
+                }
+            }
+            >div.article-footer{
+                color:#999;
+                a.btn{
+                    height:36px;
+                    line-height:36px;
+                    color:#999;
+                    margin-bottom:20px;
+                    padding:0 16px;
+                    border:1px solid #EE3B3B;
+                    &:hover{
+                        color:#fff;
+                        background-color:#EE3B3B;
+                    }
+                }
+                ul{
+                    li{
+                        display:inline-block;
+                        label{
+                            font-weight:normal;
+                        }
+                        a{
+                            color:#CD3700;
+                            margin:0 10px;
+                        }
+                    }
+                }
+            }
+        }
+        >section.about-right{
+            float:left;
+            width:420px;
+            margin-left:20px;
+            div.about-us{
+                h5{
+                    width:200px;
+                    height:36px;
+                    line-height:36px;
+                    color:#fff;
+                    text-align:center;
+                    padding:0 10px;
+                    margin:0 auto;
+                    border-radius:6px;
+                    background-color:#190608;
+                }
+                img{
+                    margin-top:20px;
+                }
+            }
+        }
+    }
+    /*推荐*/
+    section.rec-container{
         width:$page-container-width;
         margin:20px auto;
         display:flex;
@@ -148,6 +232,7 @@ header#header{
         >.rec-box{
             width:390px;
             height:440px;
+            box-shadow:-1px 0px 1px rgba(0, 0, 0, .04),0px 1px 1px rgba(0, 0, 0, .13),1px 0px 2px rgba(0, 0, 0, .05);
             -webkit-animation: floorShow .3s 0s both;
             -moz-animation: floorShow .3s 0s both;
             animation: floorShow .3s 0s both;
@@ -200,6 +285,11 @@ header#header{
                     height: 24px;
                 }
             }
+            div.rec-first+div.rec-content{
+                a{
+                    color:#4998a1;
+                }
+            }
             div.rec-second{
                 background: #7d2e5c;
                 background-image: -webkit-linear-gradient(left,#7d2e5c,#6f184a);
@@ -209,6 +299,11 @@ header#header{
                     background-position: 0 -160px;
                     width: 24px;
                     height: 24px;
+                }
+            }
+             div.rec-second+div.rec-content{
+                a{
+                    color:#8b3a6d;
                 }
             }
             div.rec-third{
@@ -222,9 +317,41 @@ header#header{
                     height: 24px;
                 }
             }
+            div.rec-third+div.rec-content{
+                a{
+                    color:#e77005;
+                }
+            }
             >.rec-content{
-                height:360px;
-               border:1px solid #ccc;
+                >ul{
+                    li{
+                        height:130px;
+                        border-bottom:1px dashed #ddd;
+                        img,a{
+                            display:inline-block;
+                            vertical-align:middle;
+                        }
+                        >img{
+                            width:150px;
+                            height:100px;
+                            margin:10px;
+                            -webkit-transition: -webkit-transform .4s ease-out;
+                            transition: -webkit-transform .4s ease-out;
+                            -moz-transition: transform .4s ease-out,-moz-transform .4s ease-out;
+                            transition: transform .4s ease-out;
+                            transition: transform .4s ease-out,-webkit-transform .4s ease-out,
+                            -moz-transform .4s ease-out;
+                        }
+                        >a{
+                            width:200px;
+                            color:#4998a1;
+                            outline:none;
+                        }
+                    }
+                    li:last-child{
+                        border:none;
+                    }
+                }
             }
         }
     }
@@ -232,11 +359,8 @@ header#header{
 
 /*底部*/
 footer#footer{
-    /* display:flex;
-    display:-webkit-flex;
-    display-direction:column; */
     height:120px;
-    margin-top:20px;
+    margin-top:2\40px;
     color:#fff;
     background-color:rgba(7, 17, 27, 0.8);
     >.footer-container{
