@@ -2,16 +2,17 @@
 * @Author: dongying
 * @Date:   2016-10-28 11:24:33
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-11-02 16:38:40
+* @Last Modified time: 2016-11-02 22:37:12
 */
 
 $header-height:60px;
 $header-bg:#fff;
-$header-border-color:#F5523F;
+$header-border-color:#854f4f;
 $header-box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+$header-login-btn-color:#7e3b3c;
 $banner-anchor-width:60px;
 $page-container-width:1190px;
-$s-modules-h5-bg-color:#190608;
+$s-modules-h5-bg-color:#7a6e6e;
 $read-btn-bg-color:#EE3B3B;
 $tag-item-color:#f6f6f6;
 $tag-item-bg-color:#865454;
@@ -64,8 +65,7 @@ header#header {
                     line-height: 57px;
                     vertical-align: middle;
                     color: #333;
-                    padding: 0 15px;
-                    margin-right: 16px;
+                    padding: 0 20px;
                     background-color: $header-bg;
                     &:hover {
                         color: #fff;
@@ -75,35 +75,37 @@ header#header {
                     }
                 }
                 a.login {
-                    margin-top: 14px;
                     height: 30px;
                     line-height: 30px;
+                    margin: 14px 16px 0 0;
                     vertical-align: middle;
                     color: #000;
-                    border: 1px solid #d52222;
+                    border: 1px solid #ec570e;
                     border-radius: 4px;
                     &:hover {
                         color: #fff;
-                        background-color: #d52222;
+                        border:1px solid $header-login-btn-color;
+                        background-color: $header-login-btn-color;
                         cursor: pointer;
                     }
                 }
             }
             li.search {
+                margin-left:80px;
                 >a.searchLink {
                     position: relative;
                     >i.fa-search {
                         position: absolute;
-                        top: 24px;
-                        left: 30px;
+                        top: 22px;
+                        right: 40px;
                         color: #999;
                     }
                     >input {
                         width: 200px;
                         height: 30px;
                         line-height: 30px;
-                        text-indent: 40px;
-                        border-radius: 20px;
+                        text-indent:15px;
+                        border-radius: 15px;
                     }
                     &:hover {
                         color: #000;
@@ -238,7 +240,7 @@ header#header {
             margin-left: 20px;
             >div.s-modules {
                 h5 {
-                    width: 40%;
+                    width: 80%;
                     height: 36px;
                     line-height: 36px;
                     color: #fff;
