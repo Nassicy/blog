@@ -1,9 +1,11 @@
+
 /*
-* @Author: anchen
+* @Author: dongying
 * @Date:   2016-11-03 14:13:19
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-11-03 18:06:31
+* @Last Modified time: 2016-11-03 22:37:11
 */
+
 
 div.login-container {
     position: absolute;
@@ -11,13 +13,12 @@ div.login-container {
     height: 100%;
     background: url("../images/bg.jpg") center / cover;
 }
-
 div.login-box {
     overflow: hidden;
     position: absolute;
     width: 500px;
     height: 500px;
-    background-color: rgba(40, 57, 101, .9);
+    background-color: rgba(255,255,255,0.6);
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
     left: 50%;
     top: 50%;
@@ -46,7 +47,7 @@ div.login-html {
     }
     label.tab {
         display: inline-block;
-        font-size: 20px;
+        font-size: 18px;
         letter-spacing: 4px;
         padding-bottom: 5px;
         margin: 0 15px 10px 0;
@@ -54,15 +55,15 @@ div.login-html {
     }
     .sign-in:checked+label.tab,
     .sign-up:checked+label.tab {
-        color: #fff;
-        border-color: #1161ee;
+        color: rgb(3, 169, 245);
+        border-color: rgb(3, 169, 245);
     }
-    .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-box {
+    .sign-in:checked + .tab + .sign-up + .tab + .sign-in-box {
         -webkit-transform: rotate(0);
         -ms-transform: rotate(0);
         transform: rotate(0);
     }
-    .sign-up:checked + .tab + .login-form .sign-up-box {
+    .sign-up:checked + .tab + .sign-up-box {
         -webkit-transform: rotate(0);
         -ms-transform: rotate(0);
         transform: rotate(0);
@@ -105,7 +106,7 @@ div.login-form {
             font-size: 15px;
             margin: -3px 0px;
             padding: 5px 15px;
-            border-radius: 25px;
+            border-radius:25px !important;
             cursor: pointer;
             background: rgb(3, 169, 245);
             color: #fff;
@@ -117,33 +118,32 @@ div.login-form {
             display:none;
         }
         label {
+            display:inline-block;
+            color:#999;
             span.icon{
+                display:inline-block;
+                position:relative;
                 width:15px;
                 height:15px;
+                vertical-align:middle;
+                margin-top:-3px;
                 border-radius:2px;
-                position:relative;
-                display:inline-block;
-                background:rgba(255,255,255,.1);
-            }
-            span.icon:before,
-            span.icon:after {
-                background: #fff;
-                -webkit-transition: all .2s ease-in-out 0s;
-                transition: all .2s ease-in-out 0s;
+                background:rgba(89, 90, 92, 0.9);
             }
         }
         .check:checked + label {
-            color: #fff;
+            color:rgb(3, 169, 245);
         }
-        .check:checked + label .icon:before {
-            -webkit-transform: scale(1) rotate(45deg);
-            -ms-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-        }
-        .check:checked + label .icon:after {
-            -webkit-transform: scale(1) rotate(-45deg);
-            -ms-transform: scale(1) rotate(-45deg);
-            transform: scale(1) rotate(-45deg);
+        .check:checked+label span.icon{
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwcHgiIGhlaWdodD0iMTVweCIgdmlld0JveD0iMCAwIDIwIDE1Ij4NCjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iNy4xNDMsMTQuOTM4IDAsNy43OTYgMi4wMjEsNS43NzYgNy4xNDMsMTAuODk4IDE3Ljk3OSwwLjA2MiAyMCwyLjA4MiAiLz4NCjwvc3ZnPg0K');
+            background-color: rgb(3, 169, 245);
+            border-color: rgb(3, 169, 245);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 11px auto;
+            -moz-background-size: 11px auto;
+            -o-background-size: 11px auto;
+            background-size: 11px auto;
         }
     }
 }
