@@ -1,0 +1,82 @@
+
+
+
+header#header {
+    width: 100%;
+    min-width: $page-container-width;
+    height: $header-height;
+    background: $header-bg;
+    border-top: 3px solid $header-border-color;
+    box-shadow: $header-box-shadow;
+    >div.navbar-container {
+        width: $page-container-width;
+        margin: 0 auto;
+        >div.navbar-header {
+            margin-right: 100px;
+            img {
+                width: 100px;
+                height: $header-height /6*5.7;
+                vertical-align: middle;
+            }
+        }
+        nav.nav {
+            float: left;
+            li.nav-item {
+                float: left;
+                >a {
+                    display: inline-block;
+                    height: 57px;
+                    line-height: 57px;
+                    vertical-align: middle;
+                    color: #333;
+                    padding: 0 20px;
+                    background-color: $header-bg;
+                    &:hover {
+                        color: #fff;
+                        background: $header-border-color;
+                        text-decoration: none;
+                        transition: all .3s;
+                    }
+                }
+                a.login {
+                    height: 30px;
+                    line-height: 30px;
+                    margin: 14px 16px 0 0;
+                    vertical-align: middle;
+                    color: #000;
+                    border: 1px solid #ec570e;
+                    border-radius: 4px;
+                    &:hover {
+                        color: #fff;
+                        border: 1px solid $header-login-btn-color;
+                        background-color: $header-login-btn-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+            li.search {
+                margin-left: 80px;
+                >a.searchLink {
+                    position: relative;
+                    >i.fa-search {
+                        position: absolute;
+                        top: 22px;
+                        right: 40px;
+                        color: #999;
+                    }
+                    >input {
+                        width: 200px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-indent: 15px;
+                        border-radius: 15px;
+                    }
+                    &:hover {
+                        color: #000;
+                        background-color: $header-bg;
+                    }
+                }
+            }
+        }
+    }
+}

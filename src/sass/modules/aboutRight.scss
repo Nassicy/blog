@@ -1,0 +1,109 @@
+
+>section.about-right {/*右侧部分*/
+    float: left;
+    width: 26%;
+    margin-left: 20px;
+    >div.s-modules {
+        h5 {
+            width: 80%;
+            height: 36px;
+            line-height: 36px;
+            color: #fff;
+            text-align: center;
+            padding: 0 10px;
+            margin: 0 auto;
+            border-radius: 6px;
+            background-color: $s-modules-h5-bg-color;
+        }
+    }
+    >div.about-us {
+        >div.about-us-content {
+            width: 80%;
+            margin: 20px auto 10px;
+            img {
+                max-width: 100%;
+            }
+            p {
+                text-indent: 14px;
+                line-height: 26px;
+            }
+        }
+    }
+    >div.about-tags {
+        width: 286px;
+        margin: 10px auto;
+        border: 1px solid #ddd;
+        h4 {
+            color: #fff;
+            height: 32px;
+            line-height: 32px;
+            background-image: -webkit-linear-gradient(90deg, #865454, #7e3b3c);
+            i {
+                display: inline-block;
+                padding: 0 6px;
+            }
+        }
+        >div.about-tags-content {
+            width: 100%;
+            padding: 10px 10px;
+            a.tag-item {
+                display: inline-block;
+                height: 26px;
+                line-height: 26px;
+                color: #fff;
+                border-color: $tag-item-bg-color;
+                background-color: rgba(105, 17, 17, 0.68);
+                margin: 6px 10px;
+                padding: 0 10px;
+                max-width: 100px;
+                overflow: hidden;
+                word-wrap: break-word;
+                word-break: break-all;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                box-shadow: $tag-item-box-shadow;
+            }
+        }
+    }
+    >div.about-programmer {
+        >div.about-programmer-content {
+            ul {
+                li {
+                    display: block;
+                    height: 130px;
+                    margin: 10px 0;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        top: 18px;
+                        left: 10px;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 4px;
+                    }
+                    a,
+                    span {
+                        position: absolute;
+                        width: 160px;
+                    }
+                    a {
+                        top: 10px;
+                        right: 16px;
+                        width: 160px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        color: #3d1a1b;
+                        font-size: 16px;
+                    }
+                    span {
+                        top: 36px;
+                        right: 16px;
+                        line-height: 20px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

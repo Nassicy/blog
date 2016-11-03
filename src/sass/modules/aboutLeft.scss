@@ -1,0 +1,63 @@
+>article.about-left {
+        float: left;
+        width: 70%;
+        border-image: url("../images/hr-bg.png");
+        h5 {
+            width: 100px;
+            margin: 10px auto;
+            text-align: center;
+            color: #999;
+            border-bottom: 1px solid #999;
+        }
+        h4 {
+            text-align: center;
+            font-size: 16px;
+            margin: 10px;
+        }
+        >div.article-content {
+            p {
+                line-height: 26px;
+                margin-top: 10px;
+                span {
+                    color: #CD5C5C;
+                    margin-right: 10px;
+                }
+            }
+            a {
+                img {
+                    width: 100%;
+                    border-radius: 6px;
+                }
+            }
+        }
+        >div.article-footer {
+            color: #999;
+            a.read-btn {
+                display: inline-block;
+                height: 36px;
+                line-height: 36px;
+                text-align: center;
+                color: #999;
+                margin: 10px 0;
+                padding: 0 16px;
+                border: 1px solid #EE3B3B;
+                border-radius: 4px;
+                &:hover {
+                    color: #fff;
+                    background-color: #EE3B3B;
+                }
+            }
+            ul {
+                li {
+                    display: inline-block;
+                    label {
+                        font-weight: normal;
+                    }
+                    a {
+                        color: #CD3700;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }

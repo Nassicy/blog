@@ -1,0 +1,38 @@
+>.rec-header {
+    position: relative;
+    height: 55px;
+    line-height: 55px;
+    color: #fff;
+    padding-right: 20px;
+    i.box-icon-arrow {
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 20px solid #fff;
+        border-right: 20px solid transparent;
+    }
+    i:nth-of-type(2) {
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../images/icon.png");
+        background-size: 218px 188px;
+        -moz-background-size: 218px 188px;
+        background-repeat: no-repeat;
+    }
+    >h4 {
+        display: inline-block;
+    }
+    >a {
+        float: right;
+        color: #fff;
+        text-align: right;
+        &:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}

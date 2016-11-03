@@ -3,7 +3,7 @@
 * @Author: dongying
 * @Date:   2016-10-28 11:24:33
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-11-02 16:38:40
+* @Last Modified time: 2016-11-03 14:38:27
 */
 body {
   font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
@@ -24,7 +24,7 @@ header#header {
   min-width: 1190px;
   height: 60px;
   background: #fff;
-  border-top: 3px solid #F5523F;
+  border-top: 3px solid #854f4f;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
   header#header > div.navbar-container {
     width: 1190px;
@@ -45,50 +45,50 @@ header#header {
           line-height: 57px;
           vertical-align: middle;
           color: #333;
-          padding: 0 15px;
-          margin-right: 16px;
+          padding: 0 20px;
           background-color: #fff; }
           header#header > div.navbar-container nav.nav li.nav-item > a:hover {
             color: #fff;
-            background: #F5523F;
+            background: #854f4f;
             text-decoration: none;
             transition: all .3s; }
         header#header > div.navbar-container nav.nav li.nav-item a.login {
-          margin-top: 14px;
           height: 30px;
           line-height: 30px;
+          margin: 14px 16px 0 0;
           vertical-align: middle;
           color: #000;
-          border: 1px solid #d52222;
+          border: 1px solid #ec570e;
           border-radius: 4px; }
           header#header > div.navbar-container nav.nav li.nav-item a.login:hover {
             color: #fff;
-            background-color: #d52222;
+            border: 1px solid #7e3b3c;
+            background-color: #7e3b3c;
             cursor: pointer; }
-      header#header > div.navbar-container nav.nav li.search > a.searchLink {
-        position: relative; }
-        header#header > div.navbar-container nav.nav li.search > a.searchLink > i.fa-search {
-          position: absolute;
-          top: 24px;
-          left: 30px;
-          color: #999; }
-        header#header > div.navbar-container nav.nav li.search > a.searchLink > input {
-          width: 200px;
-          height: 30px;
-          line-height: 30px;
-          text-indent: 40px;
-          border-radius: 20px; }
-        header#header > div.navbar-container nav.nav li.search > a.searchLink:hover {
-          color: #000;
-          background-color: #fff; }
+      header#header > div.navbar-container nav.nav li.search {
+        margin-left: 80px; }
+        header#header > div.navbar-container nav.nav li.search > a.searchLink {
+          position: relative; }
+          header#header > div.navbar-container nav.nav li.search > a.searchLink > i.fa-search {
+            position: absolute;
+            top: 22px;
+            right: 40px;
+            color: #999; }
+          header#header > div.navbar-container nav.nav li.search > a.searchLink > input {
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            text-indent: 15px;
+            border-radius: 15px; }
+          header#header > div.navbar-container nav.nav li.search > a.searchLink:hover {
+            color: #000;
+            background-color: #fff; }
 
 /*主体内容*/
 #main {
-  min-width: 1190px;
-  /*轮播图*/
-  /*美文赏析*/
-  /*推荐*/ }
+  min-width: 1190px; }
   #main .carousel-container {
+    /*轮播图*/
     width: 100%;
     padding: 0;
     margin-top: 20px; }
@@ -124,8 +124,7 @@ header#header {
   #main section.about-main {
     width: 1190px;
     height: 950px;
-    margin: 20px auto;
-    /*右侧部分*/ }
+    margin: 20px auto; }
     #main section.about-main > article.about-left {
       float: left;
       width: 70%;
@@ -172,11 +171,12 @@ header#header {
             color: #CD3700;
             margin: 0 10px; }
     #main section.about-main > section.about-right {
+      /*右侧部分*/
       float: left;
       width: 26%;
       margin-left: 20px; }
       #main section.about-main > section.about-right > div.s-modules h5 {
-        width: 40%;
+        width: 80%;
         height: 36px;
         line-height: 36px;
         color: #fff;
@@ -184,7 +184,7 @@ header#header {
         padding: 0 10px;
         margin: 0 auto;
         border-radius: 6px;
-        background-color: #190608; }
+        background-color: #7a6e6e; }
       #main section.about-main > section.about-right > div.about-us > div.about-us-content {
         width: 80%;
         margin: 20px auto 10px; }
@@ -236,7 +236,8 @@ header#header {
           width: 100px;
           height: 100px;
           border-radius: 4px; }
-        #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li a, #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li span {
+        #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li a,
+        #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li span {
           position: absolute;
           width: 160px; }
         #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li a {
@@ -254,6 +255,7 @@ header#header {
           line-height: 20px;
           font-size: 12px; }
   #main section.rec-container {
+    /*推荐*/
     clear: both;
     width: 1190px;
     margin: 20px auto;
@@ -385,7 +387,3 @@ footer#footer {
       margin-right: 60px; }
       footer#footer > .footer-container > .footer-right i {
         margin-right: 10px; }
-
-/*# sourceMappingURL=layout.css.map */
-
-/*# sourceMappingURL=layout.css.map */

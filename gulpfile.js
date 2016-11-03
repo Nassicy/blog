@@ -1,16 +1,7 @@
-
-/*
-* @Author: dongying
-* @Date:   2016-10-15 22:22:02
-* @Last Modified by:   anchen
-* @Last Modified time: 2016-11-01 15:51:32
-*/
-
-
 'use strict';
 var gulp=require("gulp");
 var browserSync=require("browser-sync").create();
-
+var fileinClude=require("gulp-file-include");
 var imagemin=require("gulp-imagemin");
 var minifyCss=require("gulp-minify-css");
 var sass=require("gulp-sass-china");
@@ -20,6 +11,7 @@ var gutil=require("gulp-util");
 var watchPath=require("gulp-watch-path");
 var streamCombiner=require("stream-combiner2");
 var autoprefixer=require("gulp-autoprefixer");
+
 
 //控制台颜色
 var handleError=function(err){
@@ -35,7 +27,6 @@ var handleError=function(err){
 //静态服务器
 gulp.task('server',function(){
     var files=[
-        './dist/index.html',
         './dist/html/**/*',
         './dist/css/**/*',
         './dist/fonts/**/*',
@@ -48,35 +39,46 @@ gulp.task('server',function(){
     var html=['dist/html/**/*'];
     gulp.watch(html).on('change',browserSync.reload);
 })
-
 //编写普通的转化任务
-
+//文件包含
+gulp.task('fileinclude',function(){
+    gulp.src(['src/html/**/*.html','!src/html/include/*.html'])
+        .pipe(fileinClude({
+            prefix:'@@',
+            basepath:'@file'
+            }))
+        .pipe(gulp.dest('dist/html/'));
+});
+/*首页*/
+gulp.task('indexFile',function(){
+    gulp.src(['src/index.html'])
+        .pipe(fileinClude({
+            prefix:'@@',
+            basepath:'@file'
+            }))
+        .pipe(gulp.dest('dist/'));
+});
 //监听html
 gulp.task("watchHtml",function(){
-     gulp.watch(['src/html/**/*.html','src/index.html'],function(event){
+     gulp.watch('src/html/**/*.html',function(event){
         var paths=watchPath(event,'src','dist/');
         gutil.log(gutil.colors.green(event.type) + ' ' + paths.srcPath)
         gutil.log('Dist ' + paths.distPath);
         gulp.src(paths.srcPath)
-            .pipe(gulp.dest(paths.distDir))
+             .pipe(gulp.dest(paths.distDir))
     })
 })
-
-gulp.task("index",function(){
-    gulp.src('src/index.html')
-        .pipe(gulp.dest('dist/'))
-    })
 
 //编译css
 gulp.task("minifyCss",function(){
     gulp.src(['src/css/**/*','!src/css/include/*.css'])
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(autoprefixer({
             browsers:'last 2 versions',
             cascade:true,
             remove:true
         }))
-        .pipe(sourcemaps.write('./'))
+        //.pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('dist/css/'));
 });
 gulp.task('watchcss', function () {
@@ -84,22 +86,23 @@ gulp.task('watchcss', function () {
         var paths = watchPath(event, 'src/', 'dist/')
         gutil.log(gutil.colors.green(event.type) + ' ' + paths.srcPath)
         gutil.log('Dist ' + paths.distPath)
+
         gulp.src(paths.srcPath)
-            .pipe(sourcemaps.init())
+            //.pipe(sourcemaps.init())
             .pipe(autoprefixer({
               browsers: 'last 2 versions',
               cascade:true,
               remove:true
             }))
             //.pipe(minifycss())
-            .pipe(sourcemaps.write('./'))
+            //.pipe(sourcemaps.write('./'))
             .pipe(gulp.dest(paths.distDir))
     })
 });
 /*监听sass*/
 gulp.task('watchsass',function(){
     gulp.watch('src/sass/*.scss',function(event){
-        var paths=watchPath(event,'src/','dist/');
+        var paths=watchPath(event,'src','dist/');
         gutil.log(gutil.colors.green(event.type)+''+paths.srcPath);
         gutil.log('Dist '+paths.distPath);
         sass(paths.srcPath)
@@ -121,9 +124,6 @@ gulp.task('watchsass',function(){
 gulp.task("uglifyJs",function(){
     var combined=streamCombiner.obj([
         gulp.src('src/js/**/*'),
-       // sourcemaps.init(),
-        uglify(),
-        sourcemaps.write('./'),
         //sourcemaps.init(),
         //uglify(),
         //sourcemaps.write('./'),
@@ -131,6 +131,11 @@ gulp.task("uglifyJs",function(){
     ])
     combined.on('error',handleError);
 });
+//复制ueditor文件夹
+gulp.task("copyUeditor",function(){
+    gulp.src("src/js/ueditor/**/*")
+        .pipe(gulp.dest("dist/js/ueditor/"))
+    });
 //编译并压缩image
  gulp.task("image",function(){
     gulp.src('src/images/**/*')
@@ -139,6 +144,7 @@ gulp.task("uglifyJs",function(){
             }))
         .pipe(gulp.dest('dist/images/'))
 })
+
 //复制fonts等文件夹
 gulp.task("copyFonts",function(){
     gulp.src("src/fonts/**/*")
@@ -153,5 +159,4 @@ gulp.task("watch",function(){
     gulp.watch('dist/**/*.*').on('change', browserSync.reload);
 })
 
-gulp.task('default',['watchHtml','minifyCss','uglifyJs','image','copyFonts','watchsass','watchcss','server','watch','index']);
-
+gulp.task('default',['watchHtml','minifyCss','uglifyJs','image','copyFonts','watchsass','watchcss','server','fileinclude','indexFile','watch','copyUeditor']);

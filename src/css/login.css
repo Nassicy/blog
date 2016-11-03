@@ -1,0 +1,191 @@
+/*
+* @Author: anchen
+* @Date:   2016-11-03 14:13:19
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-11-03 18:06:31
+*/
+div.login-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg.jpg") center/cover; }
+
+div.login-box {
+  overflow: hidden;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: rgba(40, 57, 101, 0.9);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  left: 50%;
+  top: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms; }
+
+div.login-html {
+  padding: 60px 40px 50px 40px; }
+  div.login-html input.sign-in,
+  div.login-html input.sign-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear; }
+  div.login-html label.tab {
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 4px;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    border-bottom: 2px solid transparent; }
+  div.login-html .sign-in:checked + label.tab,
+  div.login-html .sign-up:checked + label.tab {
+    color: #fff;
+    border-color: #1161ee; }
+  div.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-box {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0); }
+  div.login-html .sign-up:checked + .tab + .login-form .sign-up-box {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0); }
+
+div.login-form div.group {
+  position: relative;
+  margin: 20px; }
+  div.login-form div.group input {
+    display: block;
+    height: 36px;
+    width: 100%;
+    border: none;
+    border-radius: 0 !important;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 300;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.15); }
+  div.login-form div.group label.float-label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 16px;
+    color: #999;
+    font-weight: 300;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all; }
+  div.login-form div.group input.button {
+    position: relative;
+    font-family: inherit;
+    font-weight: 100;
+    font-size: 15px;
+    margin: -3px 0px;
+    padding: 5px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #03a9f5;
+    color: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37); }
+div.login-form div.rem-pwd input.check {
+  display: none; }
+div.login-form div.rem-pwd label span.icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1); }
+div.login-form div.rem-pwd label span.icon:before,
+div.login-form div.rem-pwd label span.icon:after {
+  background: #fff;
+  -webkit-transition: all .2s ease-in-out 0s;
+  transition: all .2s ease-in-out 0s; }
+div.login-form div.rem-pwd .check:checked + label {
+  color: #fff; }
+div.login-form div.rem-pwd .check:checked + label .icon:before {
+  -webkit-transform: scale(1) rotate(45deg);
+  -ms-transform: scale(1) rotate(45deg);
+  transform: scale(1) rotate(45deg); }
+div.login-form div.rem-pwd .check:checked + label .icon:after {
+  -webkit-transform: scale(1) rotate(-45deg);
+  -ms-transform: scale(1) rotate(-45deg);
+  transform: scale(1) rotate(-45deg); }
+
+.form-highlight {
+  position: absolute;
+  height: 60%;
+  width: 60px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.4; }
+
+.input:focus ~ .form-highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease; }
+
+.float-label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-size: 16px;
+  color: #999;
+  font-weight: 300;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all; }
+
+.input:focus ~ .float-label, .input:valid ~ .float-label {
+  top: -15px;
+  font-size: 12px; }
+
+.group erroru, .group errorp {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 38px;
+  font-size: 11px;
+  color: #d34336;
+  font-weight: 300;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) all;
+  -moz-transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) all;
+  -webkit-transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) all;
+  opacity: 0; }
+
+.group erroru i, .group errorp i {
+  position: absolute;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  float: right; }
+
+.group erroru i svg, .group errorp i svg {
+  fill: #d34336; }
+
+.group[errr] .float-label {
+  color: #d34336 !important; }
+
+.group[errr] .input {
+  border-bottom: 1px solid #d34336 !important; }
+
+.group[errr] .input:focus {
+  border-bottom: 2px solid #d34336 !important; }
+
+.group[errr] erroru, .group[errr] errorp {
+  opacity: 1; }
+
+/*# sourceMappingURL=login.css.map */

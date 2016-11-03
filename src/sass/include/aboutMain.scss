@@ -1,0 +1,7 @@
+section.about-main {
+    width: $page-container-width;
+    height: 950px;
+    margin: 20px auto;
+    @import '../modules/aboutLeft';
+    @import '../modules/aboutRight';
+}

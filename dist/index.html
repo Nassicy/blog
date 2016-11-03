@@ -10,37 +10,41 @@
     <link rel="stylesheet" type="text/css" href="css/layout.css">
 </head>
 
-<body>
+<body >
     <header id="header" class="">
-        <div class="navbar-container">
-            <div class="navbar-header">
-                <a href="index.html">
-                    <img src="images/logo.gif" alt="logo" />
-                </a>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li class="nav-item"><a href="index.html" title="首页">首页</a></li>
-                    <li class="nav-item"><a href="index.html" title="前端">前端</a></li>
-                    <li class="nav-item"><a href="index.html" title="Java">Java</a></li>
-                    <li class="nav-item"><a href="index.html" title="数据库">数据库</a></li>
-                    <li class="nav-item"><a href="index.html" title="关于我">关于我</a></li>
-                    <!-- 搜索按钮[[ -->
-                    <li class="search nav-item">
-                        <a class="searchLink">
-                            <i class="fa fa-search"></i>
-                            <input type="text" placeholder="search here.." class="searchWhat">
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="login">登录</a>
-                    </li>
-                </ul>
-            </nav>
+    <div class="navbar-container">
+        <div class="navbar-header">
+            <a href="index.html">
+                <img src="images/logo.gif" alt="logo" />
+            </a>
         </div>
-    </header>
+        <nav class="nav">
+            <ul>
+                <li class="nav-item"><a href="index.html" title="首页">首页</a></li>
+                <li class="nav-item"><a href="index.html" title="前端">前端</a></li>
+                <li class="nav-item"><a href="index.html" title="Java">Java</a></li>
+                <li class="nav-item"><a href="index.html" title="数据库">数据库</a></li>
+                <li class="nav-item"><a href="index.html" title="关于我">关于我</a></li>
+                <!-- 搜索按钮[[ -->
+                <li class="search nav-item">
+                    <a class="searchLink">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="search here.." class="searchWhat">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="login" href="html/login/login.html">登录</a>
+                </li>
+                <li class="nav-item">
+                    <a class="login" href="html/login/login.html">注册</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
     <!-- /header -->
-    <main id="main">
+    <main id="main" >
         <section class=" carousel-container">
             <div id="myCarousel" class="carousel slide">
                 <!-- 轮播（Carousel）指标 -->
@@ -51,7 +55,7 @@
                 <!-- 轮播（Carousel）项目 -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="images/banner1.png" alt="First slide">
+                        <img src="images/banner2.png" alt="First slide">
                     </div>
                     <div class="item">
                         <img src="images/banner2.png" alt="Second slide">
@@ -126,7 +130,6 @@
                 </div>
                 <div class="about-programmer s-modules">
                     <h5>程序生活</h5>
-                    <button type="">sad</button>
                     <div class="about-programmer-content">
                     <ul>
                         <li>
@@ -255,11 +258,11 @@
         </section>
     </main>
     <footer id="footer">
-        <section class="footer-container">
-            <ul class="footer-left">
+    <section class="footer-container">
+        <ul class="footer-left">
             <li class="friend-link">
-               <label>友情链接:</label>
-               <a href="http://www.imooc.com/">慕课网</a>
+                <label>友情链接:</label>
+                <a href="http://www.imooc.com/">慕课网</a>
             </li>
             <li>
                 <p>Copyright &copy;2016 遇见更好地自己</p>
@@ -279,10 +282,10 @@
                 <a href="javascript:void(0)">https://github.com/Nassicy</a>
             </li>
         </ul>
-        </section>
-    </footer>
+    </section>
+</footer>
+
 </body>
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <script type="text/javascript" src="js/carousel.js"></script>
-
 </html>

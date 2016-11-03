@@ -1,0 +1,14 @@
+body {
+  font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
+  font-size: 14px;
+  box-sizing: border-box; }
+
+body a {
+  outline: none;
+  transition: 0.5s all ease;
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  -ms-transition: 0.5s all ease; }
+
+/*# sourceMappingURL=global.css.map */

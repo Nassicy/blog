@@ -382,5 +382,3 @@ a [class^="icon-"],a [class*=" icon-"]{cursor:pointer;}
 .icon-vk{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf189;');}
 .icon-weibo{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf18a;');}
 .icon-renren{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf18b;');}
-
-/*# sourceMappingURL=font-awesome-ie7.min.css.map */

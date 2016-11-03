@@ -1,0 +1,7 @@
+
+#main {
+    min-width: $page-container-width;
+    @import '../modules/carousel';
+    @import 'aboutMain';
+    @import 'recommend';
+}

@@ -1,0 +1,47 @@
+
+
+
+
+
+.carousel-container {    /*轮播图*/
+
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+    a.banner-anchor {
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        width: $banner-anchor-width;
+        height: $banner-anchor-width;
+        overflow: hidden;
+        text-indent: -90em;
+        background-repeat: no-repeat;
+        background-color: #14191e;
+        border-radius: 6px;
+        opacity: 0.8;
+        &:hover {
+            background-color: #14191e;
+            opacity: 0.5;
+        }
+    }
+    a.prev,
+    a.next {
+        position: absolute;
+        top: 50%;
+        height: $banner-anchor-width;
+        width: $banner-anchor-width;
+        background-image: url(../images/pre.png);
+        background-position: center;
+    }
+    a.prev {
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        z-index: 1;
+        margin-left: 10px;
+    }
+    a.next {
+        right: 10px;
+    }
+}

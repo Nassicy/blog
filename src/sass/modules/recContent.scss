@@ -1,0 +1,33 @@
+>.rec-content {
+    width: 389px;
+    box-shadow: $rec-box-box-shadow;
+    >ul {
+        li {
+            height: 130px;
+            border-bottom: 1px dashed #ddd;
+            img,
+            a {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            >img {
+                width: 150px;
+                height: 100px;
+                margin: 10px;
+                -webkit-transition: -webkit-transform .4s ease-out;
+                transition: -webkit-transform .4s ease-out;
+                -moz-transition: transform .4s ease-out, -moz-transform .4s ease-out;
+                transition: transform .4s ease-out;
+                transition: transform .4s ease-out, -webkit-transform .4s ease-out, -moz-transform .4s ease-out;
+            }
+            >a {
+                width: 200px;
+                color: #4998a1;
+                outline: none;
+            }
+        }
+        li:last-child {
+            border: none;
+        }
+    }
+}

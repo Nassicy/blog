@@ -1,0 +1,25 @@
+
+
+
+
+section.rec-container {
+/*推荐*/
+    clear: both;
+    width: $page-container-width;
+    margin: 20px auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-decoration: column;
+    justify-content: space-between;
+    >.rec-box {
+        width: 390px;
+        height: 440px;
+        -webkit-animation: floorShow .3s 0s both;
+        -moz-animation: floorShow .3s 0s both;
+        animation: floorShow .3s 0s both;
+        @import '../modules/recHeader';
+        @import '../modules/recSepHeader';
+        @import '../modules/recContent';
+    }
+}
+
