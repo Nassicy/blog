@@ -21,43 +21,45 @@
                     <div class="sign-in-box">
                         <div id="username-box" class="group">
                             <input id="username" spellcheck=false class="input" name="username" type="text" size="18" alt="login" required="">
-                            <span class="form-highlight"></span>
-                            <span class="form-bar"></span>
                             <label for="username" class="float-label">用户名</label>
                         </div>
                         <div id="password-box" class="group">
                             <input id="password" class="input" spellcheck=false name="password" type="password" size="18" alt="login" required="">
-                            <span class="form-highlight"></span>
-                            <span class="form-bar"></span>
                             <label for="password" class="float-label">密码</label>
                         </div>
                         <div class="group rem-pwd">
-                            <input id="check" type="checkbox" class="check" checked>
-                            <label for="check"><span class="fa  fa-check-square-o"></span> 记住密码</label>
+                            <input id="check" type="checkbox" class="check" >
+                            <label for="check"><span class="icon"></span> 记住密码</label>
                         </div>
                         <div class="group">
                             <input type="submit" class="button" value="登录"/>
                         </div>
+                        <div class="foot-lnk">
+                            <a href="#forgot">忘记密码?</a>
+                        </div>
                     </div>
                     <div class="sign-up-box">
                         <div class="group">
-                            <label for="user" class="float-label">Username</label>
                             <input id="user" type="text" class="input">
+                            <label for="user" class="float-label">用户名</label>
                         </div>
                         <div class="group">
-                            <label for="pass" class="float-label">Password</label>
-                            <input id="pass" type="password" class="input" data-type="password">
+                            <input id="pass" type="password" class="input">
+                            <label for="pass" class="float-label">密码</label>
                         </div>
                         <div class="group">
-                            <label for="pass" class="float-label">Repeat Password</label>
-                            <input id="pass" type="password" class="input" data-type="password">
+                            <input id="confirm-pwd" type="password" class="input">
+                            <label for="confirm-pwd" class="float-label">确认密码</label>
                         </div>
                         <div class="group">
-                            <label for="pass" class="float-label">Email Address</label>
-                            <input id="pass" type="text" class="input">
+                            <input id="email" type="text" class="input">
+                            <label for="email" class="float-label">邮箱地址</label>
                         </div>
                         <div class="group">
                             <input type="submit" class="button" value="注册"/>
+                        </div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">直接登录</label>
                         </div>
                     </div>
                 </div>
@@ -65,90 +67,17 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+<script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
 <script type="text/javascript">
-$(document).ready(function () {
-        $(function () {
-            var animationLibrary = 'animate';
-            $.easing.easeOutQuart = function (x, t, b, c, d) {
-                return -c * ((t = t / d - 1) * t * t * t - 1) + b;
-            };
-            $('[ripple]:not([disabled],.disabled)').on('mousedown', function (e) {
-                var button = $(this);
-                var touch = $('<touch><touch/>');
-                var size = button.outerWidth() * 1.8;
-                var complete = false;
-                $(document).on('mouseup', function () {
-                    var a = { 'opacity': '0' };
-                    if (complete === true) {
-                        size = size * 1.33;
-                        $.extend(a, {
-                            'height': size + 'px',
-                            'width': size + 'px',
-                            'margin-top': -size / 2 + 'px',
-                            'margin-left': -size / 2 + 'px'
-                        });
-                    }
-                    touch[animationLibrary](a, {
-                        duration: 500,
-                        complete: function () {
-                            touch.remove();
-                        },
-                        easing: 'swing'
-                    });
-                });
-                touch.addClass('touch').css({
-                    'position': 'absolute',
-                    'top': e.pageY - button.offset().top + 'px',
-                    'left': e.pageX - button.offset().left + 'px',
-                    'width': '0',
-                    'height': '0'
-                });
-                button.get(0).appendChild(touch.get(0));
-                touch[animationLibrary]({
-                    'height': size + 'px',
-                    'width': size + 'px',
-                    'margin-top': -size / 2 + 'px',
-                    'margin-left': -size / 2 + 'px'
-                }, {
-                    queue: false,
-                    duration: 500,
-                    'easing': 'easeOutQuart',
-                    'complete': function () {
-                        complete = true;
-                    }
-                });
-            });
-        });
-        var username = $('#username'), password = $('#password'), erroru = $('erroru'), errorp = $('errorp'), submit = $('#submit'), udiv = $('#u'), pdiv = $('#p');
-        username.blur(function () {
-            if (username.val() == '') {
-                udiv.attr('errr', '');
-            } else {
-                udiv.removeAttr('errr');
+    $(function(){
+        $("input.input").change(function(elem){
+            var curTxt=$(this).val();
+            if(curTxt!=""){
+                $(this).next("label").css("top","-15px");
+                $(this).next("label").css("font-size","12px");
             }
-        });
-        password.blur(function () {
-            if (password.val() == '') {
-                pdiv.attr('errr', '');
-            } else {
-                pdiv.removeAttr('errr');
-            }
-        });
-        submit.on('click', function (event) {
-            event.preventDefault();
-            if (username.val() == '') {
-                udiv.attr('errr', '');
-            } else {
-                udiv.removeAttr('errr');
-            }
-            if (password.val() == '') {
-                pdiv.attr('errr', '');
-            } else {
-                pdiv.removeAttr('errr');
-            }
-        });
-    });
-</script>
 
+        });
+    })
+</script>
 </html>
