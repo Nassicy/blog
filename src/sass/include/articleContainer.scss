@@ -1,0 +1,8 @@
+main.article-container {
+    width: $page-container-width;
+    display:flex;
+    height: 950px;
+    margin: 20px auto;
+    @import '../modules/articleLeft';
+    @import '../modules/articleRight';
+}

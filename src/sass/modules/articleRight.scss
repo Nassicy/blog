@@ -1,0 +1,31 @@
+div.article-right{
+    width:$right-width;
+    margin-left:$right-margin-left;
+    aside.month-ranking-list{
+        margin:0 0 20px 10px;
+        background-color:#fff;
+        border:1px solid #ddd;
+        h2{
+            font-size:16px;
+            border-left:4px solid #cfc;
+            padding-left:10px;
+        }
+        ul{
+            padding:10px;
+            li{
+                height:30px;
+                line-height:30px;
+                span{
+                    display:inline-block;
+                    width:20px;
+                    height:20px;
+                    line-height:20px;
+                    color:#fff;
+                    text-align:center;
+                    margin-right:10px;
+                    background-color:#ddd;
+                }
+            }
+        }
+    }
+}

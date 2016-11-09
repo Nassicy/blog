@@ -3,12 +3,13 @@
 * @Author: dongying
 * @Date:   2016-10-28 11:24:33
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-11-03 22:22:52
+* @Last Modified time: 2016-11-09 19:47:58
 */
 body {
   font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
   font-size: 14px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background: #f3f5f7; }
 
 body a {
   outline: none;
@@ -361,6 +362,90 @@ header#header {
             outline: none; }
         #main section.rec-container > .rec-box > .rec-content > ul li:last-child {
           border: none; }
+
+/*文章列表页*/
+main.article-container {
+  width: 1190px;
+  display: flex;
+  height: 950px;
+  margin: 20px auto; }
+  main.article-container div.article-left {
+    width: 70%; }
+    main.article-container div.article-left article.article-list {
+      display: flex;
+      display-direction: column;
+      width: 100%;
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px; }
+      main.article-container div.article-left article.article-list aside.article-img {
+        flex: 1;
+        position: relative;
+        margin-top: 10px; }
+        main.article-container div.article-left article.article-list aside.article-img img {
+          width: 170px;
+          height: 150px; }
+        main.article-container div.article-left article.article-list aside.article-img p {
+          position: absolute;
+          top: 0;
+          height: 28px;
+          line-height: 28px;
+          color: #fff;
+          padding: 0 10px;
+          background: rgba(0, 0, 0, 0.5); }
+      main.article-container div.article-left article.article-list aside.article-content {
+        flex: 3;
+        margin-top: -10px; }
+        main.article-container div.article-left article.article-list aside.article-content label, main.article-container div.article-left article.article-list aside.article-content span {
+          color: #8f8f8f; }
+        main.article-container div.article-left article.article-list aside.article-content h1 {
+          font-size: 16px; }
+        main.article-container div.article-left article.article-list aside.article-content label {
+          display: inline-block;
+          max-width: 100%;
+          margin-bottom: 5px;
+          font-weight: normal; }
+        main.article-container div.article-left article.article-list aside.article-content p {
+          color: #0c0c0c;
+          line-height: 26px;
+          margin-bottom: 0; }
+        main.article-container div.article-left article.article-list aside.article-content span strong {
+          font-weight: normal; }
+        main.article-container div.article-left article.article-list aside.article-content span.intro-left {
+          display: inline-block;
+          width: 40%;
+          text-align: left; }
+        main.article-container div.article-left article.article-list aside.article-content span.intro-right {
+          display: inline-block;
+          width: 58%;
+          text-align: right; }
+  main.article-container div.article-right {
+    width: 26%;
+    margin-left: 20px; }
+    main.article-container div.article-right aside.month-ranking-list {
+      margin: 0 0 20px 10px;
+      background-color: #fff;
+      border: 1px solid #ddd; }
+      main.article-container div.article-right aside.month-ranking-list h2 {
+        font-size: 16px;
+        border-left: 4px solid #cfc;
+        padding-left: 10px; }
+      main.article-container div.article-right aside.month-ranking-list ul {
+        padding: 10px; }
+        main.article-container div.article-right aside.month-ranking-list ul li {
+          height: 30px;
+          line-height: 30px; }
+          main.article-container div.article-right aside.month-ranking-list ul li span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+            margin-right: 10px;
+            background-color: #ddd; }
 
 /*底部*/
 footer#footer {

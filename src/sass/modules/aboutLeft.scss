@@ -1,6 +1,6 @@
 >article.about-left {
         float: left;
-        width: 70%;
+        width: $left-width;
         border-image: url("../images/hr-bg.png");
         h5 {
             width: 100px;

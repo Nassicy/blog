@@ -1,8 +1,8 @@
 
 >section.about-right {/*右侧部分*/
     float: left;
-    width: 26%;
-    margin-left: 20px;
+    width: $right-width;
+    margin-left: $right-margin-left;
     >div.s-modules {
         h5 {
             width: 80%;
