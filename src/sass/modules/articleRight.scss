@@ -1,29 +1,121 @@
 div.article-right{
     width:$right-width;
     margin-left:$right-margin-left;
-    aside.month-ranking-list{
+    aside.list-content{
         margin:0 0 20px 10px;
         background-color:#fff;
         border:1px solid #ddd;
+        border-radius:4px;
         h2{
+            height:36px;
+            line-height:36px;
+            color:#fff;
             font-size:16px;
-            border-left:4px solid #cfc;
+            margin-top:0;
             padding-left:10px;
+            background-color:#5e6c90;
+            i{
+                margin-right:10px;
+            }
         }
-        ul{
-            padding:10px;
+    }
+    aside.search-container{
+        >div.search-group{
+            padding:$article-right-content-padding-width;
+            input,span{
+                display:inline-block;
+                line-height:32px;
+            }
+            input{
+                width:230px;
+                border-top-right-radius:0;
+                border-bottom-right-radius:0;
+            }
+            span{
+                width:36px;
+                height:34px;
+                color:#fff;
+                text-align:center;
+                border-top-right-radius:4px;
+                border-bottom-right-radius:4px;
+                margin-left:-4px;
+                background:#74567b;
+            }
+
+        }
+    }
+    aside.tags-list{
+        >div.tags-content{
+            padding:$article-right-content-padding-width;
+            a{
+                display:inline-block;
+                width:80px;
+                line-height:32px;
+                color:#fff;
+                text-align:center;
+                margin:0 6px 10px 0;
+                padding:0 10px;
+                background-color:$tag-item-bg-color;
+                box-shadow:0 1px 2px rgba(8, 8, 8, 0.6);
+            }
+        }
+    }
+    aside.month-ranking-list{
+        >ul{
+            padding:$article-right-content-padding-width;
             li{
                 height:30px;
                 line-height:30px;
                 span{
                     display:inline-block;
+                    vertical-align:middle;
                     width:20px;
                     height:20px;
                     line-height:20px;
                     color:#fff;
                     text-align:center;
                     margin-right:10px;
-                    background-color:#ddd;
+                    background-color:#5a7259;
+                }
+                a{
+                    display:inline-block;
+                    vertical-align:middle;
+                    width:89%;
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
+                    overflow:hidden;
+                    color:#984575;
+                    outline:none;
+                }
+            }
+            li:nth-of-type(1) span{
+                background-color:#e01222;
+            }
+            li:nth-of-type(2) span{
+                background-color:#e56704;
+            }
+            li:nth-of-type(3) span{
+                background-color:#b04942;
+            }
+        }
+    }
+    aside.latest-list{
+        >ul{
+            li{
+                height:30px;
+                line-height:30px;
+                a{
+                    display:inline-block;
+                    width:90%;
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
+                    overflow:hidden;
+                    color:#488bad;
+                    margin-left:20px;
+                    &:hover{
+                        color:#865454;
+                        outline:none;
+                    }
                 }
             }
         }

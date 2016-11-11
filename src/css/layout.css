@@ -9,7 +9,7 @@ body {
   font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
   font-size: 14px;
   box-sizing: border-box;
-  background: #f3f5f7; }
+  background: #f8f8f8; }
 
 body a {
   outline: none;
@@ -18,6 +18,13 @@ body a {
   -moz-transition: 0.5s all ease;
   -o-transition: 0.5s all ease;
   -ms-transition: 0.5s all ease; }
+
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
 
 /*头部*/
 header#header {
@@ -31,6 +38,7 @@ header#header {
     width: 1190px;
     margin: 0 auto; }
     header#header > div.navbar-container > div.navbar-header {
+      float: left;
       margin-right: 100px; }
       header#header > div.navbar-container > div.navbar-header img {
         width: 100px;
@@ -42,6 +50,7 @@ header#header {
         float: left; }
         header#header > div.navbar-container nav.nav li.nav-item > a {
           display: inline-block;
+          position: relative;
           height: 57px;
           line-height: 57px;
           vertical-align: middle;
@@ -66,6 +75,11 @@ header#header {
             border: 1px solid #7e3b3c;
             background-color: #7e3b3c;
             cursor: pointer; }
+      header#header > div.navbar-container nav.nav li.active a {
+        color: #fff;
+        border: 1px solid #7e3b3c;
+        background-color: #7e3b3c;
+        cursor: pointer; }
       header#header > div.navbar-container nav.nav li.search {
         margin-left: 80px; }
         header#header > div.navbar-container nav.nav li.search > a.searchLink {
@@ -92,7 +106,15 @@ header#header {
     /*轮播图*/
     width: 100%;
     padding: 0;
-    margin-top: 20px; }
+    margin-top: 20px;
+    overflow: hidden; }
+    #main .carousel-container > div#myCarousel {
+      width: auto;
+      overflow: hidden;
+      position: relative; }
+    #main .carousel-container img {
+      width: 100%;
+      height: 100%; }
     #main .carousel-container a.banner-anchor {
       position: absolute;
       top: 50%;
@@ -124,139 +146,148 @@ header#header {
       margin-left: 10px; }
     #main .carousel-container a.next {
       right: 10px; }
-  #main section.about-main {
-    width: 1190px;
-    height: 950px;
-    margin: 20px auto; }
-    #main section.about-main > article.about-left {
-      float: left;
-      width: 70%;
-      border-image: url("../images/hr-bg.png"); }
-      #main section.about-main > article.about-left h5 {
-        width: 100px;
-        margin: 10px auto;
-        text-align: center;
-        color: #999;
-        border-bottom: 1px solid #999; }
-      #main section.about-main > article.about-left h4 {
-        text-align: center;
-        font-size: 16px;
-        margin: 10px; }
-      #main section.about-main > article.about-left > div.article-content p {
-        line-height: 26px;
-        margin-top: 10px; }
-        #main section.about-main > article.about-left > div.article-content p span {
-          color: #CD5C5C;
-          margin-right: 10px; }
-      #main section.about-main > article.about-left > div.article-content a img {
-        width: 100%;
-        border-radius: 6px; }
-      #main section.about-main > article.about-left > div.article-footer {
-        color: #999; }
-        #main section.about-main > article.about-left > div.article-footer a.read-btn {
-          display: inline-block;
-          height: 36px;
-          line-height: 36px;
+  #main section.outwrap-about {
+    background-color: #f3f5f7;
+    padding-bottom: 30px; }
+    #main section.outwrap-about > section.about-main {
+      width: 1190px;
+      margin: 0 auto;
+      padding-top: 30px; }
+      #main section.outwrap-about > section.about-main > article.about-left {
+        float: left;
+        width: 70%;
+        border-image: url("../images/hr-bg.png"); }
+        #main section.outwrap-about > section.about-main > article.about-left h5 {
+          width: 100px;
+          margin: 10px auto;
           text-align: center;
           color: #999;
-          margin: 10px 0;
-          padding: 0 16px;
-          border: 1px solid #EE3B3B;
-          border-radius: 4px; }
-          #main section.about-main > article.about-left > div.article-footer a.read-btn:hover {
-            color: #fff;
-            background-color: #EE3B3B; }
-        #main section.about-main > article.about-left > div.article-footer ul li {
-          display: inline-block; }
-          #main section.about-main > article.about-left > div.article-footer ul li label {
-            font-weight: normal; }
-          #main section.about-main > article.about-left > div.article-footer ul li a {
-            color: #CD3700;
-            margin: 0 10px; }
-    #main section.about-main > section.about-right {
-      /*右侧部分*/
-      float: left;
-      width: 26%;
-      margin-left: 20px; }
-      #main section.about-main > section.about-right > div.s-modules h5 {
-        width: 80%;
-        height: 36px;
-        line-height: 36px;
-        color: #fff;
-        text-align: center;
-        padding: 0 10px;
-        margin: 0 auto;
-        border-radius: 6px;
-        background-color: #7a6e6e; }
-      #main section.about-main > section.about-right > div.about-us > div.about-us-content {
-        width: 80%;
-        margin: 20px auto 10px; }
-        #main section.about-main > section.about-right > div.about-us > div.about-us-content img {
-          max-width: 100%; }
-        #main section.about-main > section.about-right > div.about-us > div.about-us-content p {
-          text-indent: 14px;
-          line-height: 26px; }
-      #main section.about-main > section.about-right > div.about-tags {
-        width: 286px;
-        margin: 10px auto;
-        border: 1px solid #ddd; }
-        #main section.about-main > section.about-right > div.about-tags h4 {
-          color: #fff;
-          height: 32px;
-          line-height: 32px;
-          background-image: -webkit-linear-gradient(90deg, #865454, #7e3b3c); }
-          #main section.about-main > section.about-right > div.about-tags h4 i {
-            display: inline-block;
-            padding: 0 6px; }
-        #main section.about-main > section.about-right > div.about-tags > div.about-tags-content {
+          border-bottom: 1px solid #999; }
+        #main section.outwrap-about > section.about-main > article.about-left h4 {
+          text-align: center;
+          font-size: 16px;
+          margin: 10px; }
+          #main section.outwrap-about > section.about-main > article.about-left h4 a {
+            color: #090909; }
+        #main section.outwrap-about > section.about-main > article.about-left > div.article-content p {
+          line-height: 26px;
+          margin-top: 10px; }
+          #main section.outwrap-about > section.about-main > article.about-left > div.article-content p span {
+            color: #3a90a6;
+            margin-right: 10px; }
+          #main section.outwrap-about > section.about-main > article.about-left > div.article-content p span i, #main section.outwrap-about > section.about-main > article.about-left > div.article-content p a i {
+            color: #f07046;
+            margin-right: 6px; }
+        #main section.outwrap-about > section.about-main > article.about-left > div.article-content a img {
           width: 100%;
-          padding: 10px 10px; }
-          #main section.about-main > section.about-right > div.about-tags > div.about-tags-content a.tag-item {
+          border-radius: 6px; }
+        #main section.outwrap-about > section.about-main > article.about-left > div.article-footer {
+          color: #999; }
+          #main section.outwrap-about > section.about-main > article.about-left > div.article-footer a.read-btn {
             display: inline-block;
-            height: 26px;
-            line-height: 26px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            color: #999;
+            margin: 10px 0;
+            padding: 0 16px;
+            border: 1px solid #EE3B3B;
+            border-radius: 4px; }
+            #main section.outwrap-about > section.about-main > article.about-left > div.article-footer a.read-btn:hover {
+              color: #fff;
+              background-color: #EE3B3B; }
+          #main section.outwrap-about > section.about-main > article.about-left > div.article-footer ul li {
+            display: inline-block; }
+            #main section.outwrap-about > section.about-main > article.about-left > div.article-footer ul li label {
+              font-weight: normal; }
+            #main section.outwrap-about > section.about-main > article.about-left > div.article-footer ul li a {
+              color: #CD3700;
+              margin: 0 10px; }
+      #main section.outwrap-about > section.about-main > section.about-right {
+        /*右侧部分*/
+        float: left;
+        width: 26%;
+        margin-left: 20px; }
+        #main section.outwrap-about > section.about-main > section.about-right > div.s-modules h5 {
+          width: 80%;
+          height: 36px;
+          line-height: 36px;
+          color: #fff;
+          text-align: center;
+          padding: 0 10px;
+          margin: 0 auto;
+          border-radius: 6px;
+          background-color: #7a6e6e; }
+        #main section.outwrap-about > section.about-main > section.about-right > div.about-us > div.about-us-content {
+          width: 80%;
+          margin: 20px auto 10px; }
+          #main section.outwrap-about > section.about-main > section.about-right > div.about-us > div.about-us-content img {
+            max-width: 100%; }
+          #main section.outwrap-about > section.about-main > section.about-right > div.about-us > div.about-us-content p {
+            text-indent: 14px;
+            line-height: 26px; }
+        #main section.outwrap-about > section.about-main > section.about-right > div.about-tags {
+          width: 286px;
+          margin: 10px auto;
+          background-color: #fff;
+          border: 1px solid #ddd; }
+          #main section.outwrap-about > section.about-main > section.about-right > div.about-tags h4 {
             color: #fff;
-            border-color: #865454;
-            background-color: rgba(105, 17, 17, 0.68);
-            margin: 6px 10px;
-            padding: 0 10px;
-            max-width: 100px;
-            overflow: hidden;
-            word-wrap: break-word;
-            word-break: break-all;
+            height: 32px;
+            line-height: 32px;
+            background-image: -webkit-linear-gradient(90deg, #865454, #7e3b3c); }
+            #main section.outwrap-about > section.about-main > section.about-right > div.about-tags h4 i {
+              display: inline-block;
+              padding: 0 6px; }
+          #main section.outwrap-about > section.about-main > section.about-right > div.about-tags > div.about-tags-content {
+            width: 100%;
+            padding: 10px 10px; }
+            #main section.outwrap-about > section.about-main > section.about-right > div.about-tags > div.about-tags-content a.tag-item {
+              display: inline-block;
+              height: 26px;
+              line-height: 26px;
+              color: #fff;
+              border-color: #865454;
+              background-color: rgba(105, 17, 17, 0.68);
+              margin: 6px 10px;
+              padding: 0 10px;
+              max-width: 100px;
+              overflow: hidden;
+              word-wrap: break-word;
+              word-break: break-all;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              box-shadow: 0 1px 2px rgba(8, 8, 8, 0.6); }
+        #main section.outwrap-about > section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li {
+          display: block;
+          height: 130px;
+          margin: 10px 0;
+          position: relative; }
+          #main section.outwrap-about > section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li img {
+            position: absolute;
+            top: 18px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            border-radius: 4px; }
+          #main section.outwrap-about > section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li a,
+          #main section.outwrap-about > section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li span {
+            position: absolute;
+            width: 160px; }
+          #main section.outwrap-about > section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li a {
+            top: 10px;
+            right: 16px;
+            width: 160px;
             white-space: nowrap;
             text-overflow: ellipsis;
-            box-shadow: 0 1px 2px rgba(8, 8, 8, 0.6); }
-      #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li {
-        display: block;
-        height: 130px;
-        margin: 10px 0;
-        position: relative; }
-        #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li img {
-          position: absolute;
-          top: 18px;
-          left: 10px;
-          width: 100px;
-          height: 100px;
-          border-radius: 4px; }
-        #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li a,
-        #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li span {
-          position: absolute;
-          width: 160px; }
-        #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li a {
-          top: 10px;
-          right: 16px;
-          width: 160px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          color: #3d1a1b;
-          font-size: 16px; }
-        #main section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li span {
-          top: 36px;
-          right: 16px;
-          line-height: 20px;
-          font-size: 12px; }
+            overflow: hidden;
+            color: #3d1a1b;
+            font-size: 16px; }
+          #main section.outwrap-about > section.about-main > section.about-right > div.about-programmer > div.about-programmer-content ul li span {
+            top: 36px;
+            right: 16px;
+            line-height: 20px;
+            font-size: 12px; }
   #main section.rec-container {
     /*推荐*/
     clear: both;
@@ -364,14 +395,34 @@ header#header {
           border: none; }
 
 /*文章列表页*/
-main.article-container {
+section.article-list-img-content {
+  height: 240px;
+  margin-top: 20px;
+  background: url("../images/article-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%; }
+  section.article-list-img-content:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 240px;
+    top: 80px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6); }
+
+section.art-details-img-content {
+  background: url("../images/tm-contact-img.jpg");
+  background-size: 100%; }
+
+section.article-container {
   width: 1190px;
   display: flex;
   height: 950px;
   margin: 20px auto; }
-  main.article-container div.article-left {
+  section.article-container div.article-left {
     width: 70%; }
-    main.article-container div.article-left article.article-list {
+    section.article-container div.article-left article.article-list {
       display: flex;
       display-direction: column;
       width: 100%;
@@ -380,14 +431,18 @@ main.article-container {
       padding: 10px 20px;
       border: 1px solid #ddd;
       border-radius: 4px; }
-      main.article-container div.article-left article.article-list aside.article-img {
+      section.article-container div.article-left article.article-list:hover {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
+      section.article-container div.article-left article.article-list aside.article-img {
         flex: 1;
         position: relative;
         margin-top: 10px; }
-        main.article-container div.article-left article.article-list aside.article-img img {
-          width: 170px;
-          height: 150px; }
-        main.article-container div.article-left article.article-list aside.article-img p {
+        section.article-container div.article-left article.article-list aside.article-img img {
+          width: 250px;
+          height: 150px;
+          border-radius: 4px;
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); }
+        section.article-container div.article-left article.article-list aside.article-img p {
           position: absolute;
           top: 0;
           height: 28px;
@@ -395,57 +450,145 @@ main.article-container {
           color: #fff;
           padding: 0 10px;
           background: rgba(0, 0, 0, 0.5); }
-      main.article-container div.article-left article.article-list aside.article-content {
-        flex: 3;
+      section.article-container div.article-left article.article-list aside.article-content {
+        flex: 2;
         margin-top: -10px; }
-        main.article-container div.article-left article.article-list aside.article-content label, main.article-container div.article-left article.article-list aside.article-content span {
+        section.article-container div.article-left article.article-list aside.article-content label,
+        section.article-container div.article-left article.article-list aside.article-content span {
           color: #8f8f8f; }
-        main.article-container div.article-left article.article-list aside.article-content h1 {
+        section.article-container div.article-left article.article-list aside.article-content h1 {
           font-size: 16px; }
-        main.article-container div.article-left article.article-list aside.article-content label {
+          section.article-container div.article-left article.article-list aside.article-content h1 a {
+            color: #090909; }
+            section.article-container div.article-left article.article-list aside.article-content h1 a:hover {
+              color: #e16c46; }
+        section.article-container div.article-left article.article-list aside.article-content label {
           display: inline-block;
           max-width: 100%;
           margin-bottom: 5px;
           font-weight: normal; }
-        main.article-container div.article-left article.article-list aside.article-content p {
+        section.article-container div.article-left article.article-list aside.article-content p {
           color: #0c0c0c;
           line-height: 26px;
           margin-bottom: 0; }
-        main.article-container div.article-left article.article-list aside.article-content span strong {
+        section.article-container div.article-left article.article-list aside.article-content span strong {
           font-weight: normal; }
-        main.article-container div.article-left article.article-list aside.article-content span.intro-left {
+        section.article-container div.article-left article.article-list aside.article-content span.intro-left {
           display: inline-block;
           width: 40%;
           text-align: left; }
-        main.article-container div.article-left article.article-list aside.article-content span.intro-right {
+        section.article-container div.article-left article.article-list aside.article-content span.intro-right {
           display: inline-block;
           width: 58%;
           text-align: right; }
-  main.article-container div.article-right {
+  section.article-container div.art-details-left {
+    width: 70%; }
+    section.article-container div.art-details-left article.art-details-content h4 {
+      color: #e16c46;
+      font-size: 30px;
+      font-weight: 500;
+      text-align: center; }
+    section.article-container div.art-details-left article.art-details-content p {
+      line-height: 26px;
+      margin-top: 10px; }
+      section.article-container div.art-details-left article.art-details-content p span {
+        color: #3a90a6;
+        margin-right: 10px; }
+      section.article-container div.art-details-left article.art-details-content p span i, section.article-container div.art-details-left article.art-details-content p a i {
+        color: #f07046;
+        margin-right: 6px; }
+  section.article-container div.article-right {
     width: 26%;
     margin-left: 20px; }
-    main.article-container div.article-right aside.month-ranking-list {
+    section.article-container div.article-right aside.list-content {
       margin: 0 0 20px 10px;
       background-color: #fff;
-      border: 1px solid #ddd; }
-      main.article-container div.article-right aside.month-ranking-list h2 {
+      border: 1px solid #ddd;
+      border-radius: 4px; }
+      section.article-container div.article-right aside.list-content h2 {
+        height: 36px;
+        line-height: 36px;
+        color: #fff;
         font-size: 16px;
-        border-left: 4px solid #cfc;
-        padding-left: 10px; }
-      main.article-container div.article-right aside.month-ranking-list ul {
-        padding: 10px; }
-        main.article-container div.article-right aside.month-ranking-list ul li {
-          height: 30px;
-          line-height: 30px; }
-          main.article-container div.article-right aside.month-ranking-list ul li span {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            line-height: 20px;
-            color: #fff;
-            text-align: center;
-            margin-right: 10px;
-            background-color: #ddd; }
+        margin-top: 0;
+        padding-left: 10px;
+        background-color: #5e6c90; }
+        section.article-container div.article-right aside.list-content h2 i {
+          margin-right: 10px; }
+    section.article-container div.article-right aside.search-container > div.search-group {
+      padding: 10px; }
+      section.article-container div.article-right aside.search-container > div.search-group input, section.article-container div.article-right aside.search-container > div.search-group span {
+        display: inline-block;
+        line-height: 32px; }
+      section.article-container div.article-right aside.search-container > div.search-group input {
+        width: 230px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0; }
+      section.article-container div.article-right aside.search-container > div.search-group span {
+        width: 36px;
+        height: 34px;
+        color: #fff;
+        text-align: center;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        margin-left: -4px;
+        background: #74567b; }
+    section.article-container div.article-right aside.tags-list > div.tags-content {
+      padding: 10px; }
+      section.article-container div.article-right aside.tags-list > div.tags-content a {
+        display: inline-block;
+        width: 80px;
+        line-height: 32px;
+        color: #fff;
+        text-align: center;
+        margin: 0 6px 10px 0;
+        padding: 0 10px;
+        background-color: rgba(105, 17, 17, 0.68);
+        box-shadow: 0 1px 2px rgba(8, 8, 8, 0.6); }
+    section.article-container div.article-right aside.month-ranking-list > ul {
+      padding: 10px; }
+      section.article-container div.article-right aside.month-ranking-list > ul li {
+        height: 30px;
+        line-height: 30px; }
+        section.article-container div.article-right aside.month-ranking-list > ul li span {
+          display: inline-block;
+          vertical-align: middle;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          color: #fff;
+          text-align: center;
+          margin-right: 10px;
+          background-color: #5a7259; }
+        section.article-container div.article-right aside.month-ranking-list > ul li a {
+          display: inline-block;
+          vertical-align: middle;
+          width: 89%;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          color: #984575;
+          outline: none; }
+      section.article-container div.article-right aside.month-ranking-list > ul li:nth-of-type(1) span {
+        background-color: #e01222; }
+      section.article-container div.article-right aside.month-ranking-list > ul li:nth-of-type(2) span {
+        background-color: #e56704; }
+      section.article-container div.article-right aside.month-ranking-list > ul li:nth-of-type(3) span {
+        background-color: #b04942; }
+    section.article-container div.article-right aside.latest-list > ul li {
+      height: 30px;
+      line-height: 30px; }
+      section.article-container div.article-right aside.latest-list > ul li a {
+        display: inline-block;
+        width: 90%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #488bad;
+        margin-left: 20px; }
+        section.article-container div.article-right aside.latest-list > ul li a:hover {
+          color: #865454;
+          outline: none; }
 
 /*底部*/
 footer#footer {

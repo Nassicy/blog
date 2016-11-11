@@ -4,10 +4,19 @@
 
 
 .carousel-container {    /*轮播图*/
-
     width: 100%;
     padding: 0;
     margin-top: 20px;
+    overflow:hidden;
+    >div#myCarousel{
+        width:auto;
+        overflow:hidden;
+        position:relative;
+    }
+     img{
+        width:100%;
+        height:100%;
+    }
     a.banner-anchor {
         position: absolute;
         top: 50%;

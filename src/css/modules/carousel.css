@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$banner-anchor-width".
-        on line 15 of E:\codes\blog\src\sass\modules\carousel.scss
+        on line 24 of E:\codes\blog\src\sass\modules\carousel.scss
 
-10:     margin-top: 20px;
-11:     a.banner-anchor {
-12:         position: absolute;
-13:         top: 50%;
-14:         margin-top: -50px;
-15:         width: $banner-anchor-width;
-16:         height: $banner-anchor-width;
-17:         overflow: hidden;
-18:         text-indent: -90em;
-19:         background-repeat: no-repeat;
-20:         background-color: #14191e;
+19:     }
+20:     a.banner-anchor {
+21:         position: absolute;
+22:         top: 50%;
+23:         margin-top: -50px;
+24:         width: $banner-anchor-width;
+25:         height: $banner-anchor-width;
+26:         overflow: hidden;
+27:         text-indent: -90em;
+28:         background-repeat: no-repeat;
+29:         background-color: #14191e;
 
 Backtrace:
-E:\codes\blog\src\sass\modules\carousel.scss:15
+E:\codes\blog\src\sass\modules\carousel.scss:24
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
@@ -73,4 +73,4 @@ D:/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$banner-anchor-width\".\A         on line 15 of E:\codes\blog\src\sass\modules\carousel.scss\A \A 10:     margin-top: 20px;\A 11:     a.banner-anchor {\A 12:         position: absolute;\A 13:         top: 50%;\A 14:         margin-top: -50px;\A 15:         width: $banner-anchor-width;\A 16:         height: $banner-anchor-width;\A 17:         overflow: hidden;\A 18:         text-indent: -90em;\A 19:         background-repeat: no-repeat;\A 20:         background-color: #14191e;"; }
+  content: "Error: Undefined variable: \"$banner-anchor-width\".\A         on line 24 of E:\codes\blog\src\sass\modules\carousel.scss\A \A 19:     }\A 20:     a.banner-anchor {\A 21:         position: absolute;\A 22:         top: 50%;\A 23:         margin-top: -50px;\A 24:         width: $banner-anchor-width;\A 25:         height: $banner-anchor-width;\A 26:         overflow: hidden;\A 27:         text-indent: -90em;\A 28:         background-repeat: no-repeat;\A 29:         background-color: #14191e;"; }

@@ -8,7 +8,7 @@ body {
   font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
   font-size: 14px;
   box-sizing: border-box;
-  background: #f3f5f7; }
+  background: #f8f8f8; }
 
 body a {
   outline: none;
@@ -17,6 +17,13 @@ body a {
   -moz-transition: 0.5s all ease;
   -o-transition: 0.5s all ease;
   -ms-transition: 0.5s all ease; }
+
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
 
 div.login-container {
   position: absolute;

@@ -2,7 +2,7 @@
 * @Author: dongying
 * @Date:   2016-08-22 17:24:44
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-10-28 17:11:08
+* @Last Modified time: 2016-11-11 13:39:07
 */
 html {
   font-family: sans-serif;
@@ -40,20 +40,24 @@ a{
     text-decoration: none;
 }
 a:hover{
-    text-decoration: none;
+    text-decoration:none;
     outline: 0;
 }
 a:visited{
-    text-decoration: none;
+    text-decoration:none;
     outline: 0;
 }
 a:linked{
-    text-decoration: none;
+    text-decoration:none;
     outline: 0;
 }
 a:active{
-    text-decoration: none;
+    text-decoration:none;
     outline: 0;
+}
+a:focus{
+  text-decoration:none;
+  outline:none;
 }
 ins{
     background-color:#ff9;

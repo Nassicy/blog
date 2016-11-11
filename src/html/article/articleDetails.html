@@ -10,7 +10,30 @@
     </head>
     <body>
         @@include("../include/header.html")
+        <main id="main">
+            <section class="article-list-img-content art-details-img-content">
+            </section>
+            <section class="article-container clearfix">
+                <div class="art-details-left">
+                    <article class="art-details-content">
+                        <h4>Java回收机制</h4>
+                         <p>
+                            <span class="author"><i class="fa fa-pencil-square-o"></i>Sangmin Lee</span>
+                            <span class="published-date"><i class="fa  fa-calendar"></i> 2016-11-01</span>
+                            <a href="javascript:void(0)" class="article-type"><i class="fa  fa-lightbulb-o"></i>ImportNew</a>
+                        </p>
+                        <div class="art-details-info">
+                            <p>理解java垃圾回收机制有什么好处呢？作为一个软件工程师，满足自己的好奇心将是一个很好的理由，不过更重要的是，理解GC工作机制可以帮助你写出更好的Java应用程序。</p>
+                            <p>这是我个人的主观观点，但我相信一个人精通了GC，往往会是一个更好的Java程序员。如果你对GC感兴趣，那就意味着你有一定大规模应用开发的经验。如果你已经仔细过考虑选择合适的GC算法，这意味着你完全理解你开发的应用程序的功能。当然，这可能不是一个优秀开发者共同标准。然而，很少有人会反对我说的:理解GC是成为一个伟大的Java开发人员的要求。这是“成为一个Java GC专家”系列文章的第一部分。这次我将讲述GC简介，而在下一篇文章中，我将讨论分析GC状态和来自NHN的GC调优的例子。本文的目的是用简单的方式向你介绍GC。我希望这篇文章被证明是非常有帮助的。事实上，我的同事已经发表了一些关于Java内部机制的大文章，它们已经在推特变得很流行。</p>
+                            <p>这是我个人的主观观点，但我相信一个人精通了GC，往往会是一个更好的Java程序员。如果你对GC感兴趣，那就意味着你有一定大规模应用开发的经验。如果你已经仔细过考虑选择合适的GC算法，这意味着你完全理解你开发的应用程序的功能。当然，这可能不是一个优秀开发者共同标准。然而，很少有人会反对我说的:理解GC是成为一个伟大的Java开发人员的要求。这是“成为一个Java GC专家”系列文章的第一部分。这次我将讲述GC简介，而在下一篇文章中，我将讨论分析GC状态和来自NHN的GC调优的例子。本文的目的是用简单的方式向你介绍GC。我希望这篇文章被证明是非常有帮助的。事实上，我的同事已经发表了一些关于Java内部机制的大文章，它们已经在推特变得很流行。</p>
+                        </div>
+                    </article>
+                    <div class="comment-container"></div>
+                </div>
+                @@include("../include/commonRight.html")
+            </section>
+        </main>
         @@include("../include/footer.html")
     </body>
-    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
 </html>

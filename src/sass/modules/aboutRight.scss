@@ -32,6 +32,7 @@
     >div.about-tags {
         width: 286px;
         margin: 10px auto;
+        background-color:#fff;
         border: 1px solid #ddd;
         h4 {
             color: #fff;
@@ -51,7 +52,7 @@
                 height: 26px;
                 line-height: 26px;
                 color: #fff;
-                border-color: $tag-item-bg-color;
+                border-color:$tag-item-border-color;
                 background-color: rgba(105, 17, 17, 0.68);
                 margin: 6px 10px;
                 padding: 0 10px;

@@ -12,6 +12,7 @@ header#header {
         width: $page-container-width;
         margin: 0 auto;
         >div.navbar-header {
+            float:left;
             margin-right: 100px;
             img {
                 width: 100px;
@@ -20,11 +21,12 @@ header#header {
             }
         }
         nav.nav {
-            float: left;
+            float:left;
             li.nav-item {
-                float: left;
+                float:left;
                 >a {
                     display: inline-block;
+                    position:relative;
                     height: 57px;
                     line-height: 57px;
                     vertical-align: middle;
@@ -52,6 +54,14 @@ header#header {
                         background-color: $header-login-btn-color;
                         cursor: pointer;
                     }
+                }
+            }
+            li.active{
+                a{
+                    color: #fff;
+                    border: 1px solid $header-login-btn-color;
+                    background-color: $header-login-btn-color;
+                    cursor: pointer;
                 }
             }
             li.search {
