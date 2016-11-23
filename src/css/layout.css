@@ -295,11 +295,16 @@ header#header {
     margin: 20px auto;
     display: flex;
     display: -webkit-flex;
+    display: -moz-flex;
+    display: -mss-flex;
     flex-decoration: column;
     justify-content: space-between; }
     #main section.rec-container > .rec-box {
       width: 390px;
       height: 440px;
+      float: left;
+      margin-right: 6px;
+      margin-bottom: 20px;
       -webkit-animation: floorShow .3s 0s both;
       -moz-animation: floorShow .3s 0s both;
       animation: floorShow .3s 0s both; }
@@ -421,6 +426,7 @@ section.article-container {
   height: 950px;
   margin: 20px auto; }
   section.article-container div.article-left {
+    float: left;
     width: 70%; }
     section.article-container div.article-left article.article-list {
       display: flex;
@@ -434,12 +440,15 @@ section.article-container {
       section.article-container div.article-left article.article-list:hover {
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
       section.article-container div.article-left article.article-list aside.article-img {
+        float: left;
         flex: 1;
         position: relative;
-        margin-top: 10px; }
+        margin-top: 10px;
+        width: 30%;
+        height: 150px; }
         section.article-container div.article-left article.article-list aside.article-img img {
-          width: 250px;
-          height: 150px;
+          width: 100%;
+          height: 100%;
           border-radius: 4px;
           box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); }
         section.article-container div.article-left article.article-list aside.article-img p {
@@ -451,7 +460,10 @@ section.article-container {
           padding: 0 10px;
           background: rgba(0, 0, 0, 0.5); }
       section.article-container div.article-left article.article-list aside.article-content {
+        float: left;
+        width: 68%;
         flex: 2;
+        margin-left: 10px;
         margin-top: -10px; }
         section.article-container div.article-left article.article-list aside.article-content label,
         section.article-container div.article-left article.article-list aside.article-content span {
@@ -482,6 +494,7 @@ section.article-container {
           width: 58%;
           text-align: right; }
   section.article-container div.art-details-left {
+    float: left;
     width: 70%; }
     section.article-container div.art-details-left article.art-details-content h4 {
       color: #e16c46;
@@ -498,6 +511,7 @@ section.article-container {
         color: #f07046;
         margin-right: 6px; }
   section.article-container div.article-right {
+    float: left;
     width: 26%;
     margin-left: 20px; }
     section.article-container div.article-right aside.list-content {
@@ -521,6 +535,7 @@ section.article-container {
         display: inline-block;
         line-height: 32px; }
       section.article-container div.article-right aside.search-container > div.search-group input {
+        height: 34px;
         width: 230px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0; }
@@ -594,10 +609,10 @@ section.article-container {
 footer#footer {
   width: 100%;
   min-width: 1190px;
-  height: 120px;
-  margin-top: 40px;
+  height: 150px;
   color: #fff;
-  background-color: rgba(7, 17, 27, 0.8); }
+  background-color: rgba(7, 17, 27, 0.8);
+  clear: both; }
   footer#footer > .footer-container {
     width: 1190px;
     margin: 0 auto; }

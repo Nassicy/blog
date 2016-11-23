@@ -2,7 +2,7 @@
 * @Author: dongying
 * @Date:   2016-11-03 14:13:19
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-11-04 15:42:41
+* @Last Modified time: 2016-11-23 15:23:28
 */
 
 $login-color:#03a9f5;
@@ -39,6 +39,7 @@ div.login-html {
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
     -webkit-transition: all 500ms;
     -o-transition: all 500ms;
+    -ms-transition: all 500ms;
     transition: all 500ms;
 
     input.sign-in,
@@ -66,6 +67,7 @@ div.login-html {
     perspective: 1000px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
         div.sign-in-box,
         div.sign-up-box {
             position: absolute;
@@ -74,6 +76,7 @@ div.login-html {
             right: 0;
             bottom: 0;
             -webkit-transform: rotateY(180deg);
+            -ms-transform:rotateY(180deg);
             transform: rotateY(180deg);
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -119,6 +122,7 @@ div.login-html {
                 color: #999;
                 transition: 0.2s ease all;
                 -moz-transition: 0.2s ease all;
+                -ms-transition:0.2s ease all;
                 -webkit-transition: 0.2s ease all;
             }
             .input:focus {
@@ -185,6 +189,7 @@ div.login-html {
                     -webkit-background-size: 11px auto;
                     -moz-background-size: 11px auto;
                     -o-background-size: 11px auto;
+                    -ms-background-size: 11px auto;
                     background-size: 11px auto;
                 }
             }

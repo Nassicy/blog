@@ -9,11 +9,16 @@ section.rec-container {
     margin: 20px auto;
     display: flex;
     display: -webkit-flex;
+    display: -moz-flex;
+    display: -mss-flex;
     flex-decoration: column;
     justify-content: space-between;
     >.rec-box {
         width: 390px;
         height: 440px;
+        float:left;
+        margin-right:6px;
+        margin-bottom:20px;
         -webkit-animation: floorShow .3s 0s both;
         -moz-animation: floorShow .3s 0s both;
         animation: floorShow .3s 0s both;

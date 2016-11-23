@@ -3,10 +3,10 @@
 footer#footer {
     width: 100%;
     min-width: $page-container-width;
-    height: 120px;
-    margin-top: 40px;
+    height: 150px;
     color: #fff;
     background-color: rgba(7, 17, 27, 0.8);
+    clear:both;
     >.footer-container {
         width: $page-container-width;
         margin: 0 auto;
