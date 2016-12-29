@@ -1,4 +1,4 @@
->article.about-left {
+>.about-left {
         float: left;
         width: $left-width;
         border-image: url("../images/hr-bg.png");
@@ -17,7 +17,7 @@
                 color:#090909;
             }
         }
-        >div.article-content {
+        >.article-content {
             p {
                 line-height: 26px;
                 margin-top: 10px;
@@ -39,7 +39,7 @@
                 }
             }
         }
-        >div.article-footer {
+        >.article-footer {
             color: #999;
             a.read-btn {
                 display: inline-block;

@@ -1,9 +1,9 @@
 
->section.about-right {/*右侧部分*/
+>.about-right {/*右侧部分*/
     float: left;
     width: $right-width;
     margin-left: $right-margin-left;
-    >div.s-modules {
+    >.about-modules {
         h5 {
             width: 80%;
             height: 36px;
@@ -16,8 +16,8 @@
             background-color: $s-modules-h5-bg-color;
         }
     }
-    >div.about-us {
-        >div.about-us-content {
+    >.about-us {
+        >.about-us-content {
             width: 80%;
             margin: 20px auto 10px;
             img {
@@ -29,7 +29,7 @@
             }
         }
     }
-    >div.about-tags {
+    >.about-tags {
         width: 286px;
         margin: 10px auto;
         background-color:#fff;
@@ -44,10 +44,10 @@
                 padding: 0 6px;
             }
         }
-        >div.about-tags-content {
+        >.about-tags-content {
             width: 100%;
             padding: 10px 10px;
-            a.tag-item {
+            .tag-item {
                 display: inline-block;
                 height: 26px;
                 line-height: 26px;
@@ -66,8 +66,8 @@
             }
         }
     }
-    >div.about-programmer {
-        >div.about-programmer-content {
+    >.about-programmer {
+        >.about-programmer-content {
             ul {
                 li {
                     display: block;

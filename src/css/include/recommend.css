@@ -4,7 +4,7 @@ Error: Undefined variable: "$page-container-width".
 
 3: 
 4: 
-5: section.rec-container {
+5: .rec-container {
 6: /*推荐*\/
 7:     clear: both;
 8:     width: $page-container-width;
@@ -62,4 +62,4 @@ D:/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$page-container-width\".\A         on line 8 of E:\codes\blog\src\sass\include\recommend.scss\A \A 3: \A 4: \A 5: section.rec-container {\A 6: /*推荐*/\A 7:     clear: both;\A 8:     width: $page-container-width;\A 9:     margin: 20px auto;\A 10:     display: flex;\A 11:     display: -webkit-flex;\A 12:     display: -moz-flex;\A 13:     display: -mss-flex;"; }
+  content: "Error: Undefined variable: \"$page-container-width\".\A         on line 8 of E:\codes\blog\src\sass\include\recommend.scss\A \A 3: \A 4: \A 5: .rec-container {\A 6: /*推荐*/\A 7:     clear: both;\A 8:     width: $page-container-width;\A 9:     margin: 20px auto;\A 10:     display: flex;\A 11:     display: -webkit-flex;\A 12:     display: -moz-flex;\A 13:     display: -mss-flex;"; }

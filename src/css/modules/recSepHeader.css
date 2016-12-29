@@ -2,7 +2,7 @@
 Error: Undefined variable: "$rec-first-header-color".
         on line 2 of E:\codes\blog\src\sass\modules\recSepHeader.scss
 
-1: div.rec-first {
+1: .rec-first {
 2:     background-color: $rec-first-header-color;
 3:     background-image: -webkit-linear-gradient(left, #4998a1, #2e828b);
 4:     background-image: -moz-linear-gradient(left, #4998a1, #2e828b);
@@ -58,4 +58,4 @@ D:/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$rec-first-header-color\".\A         on line 2 of E:\codes\blog\src\sass\modules\recSepHeader.scss\A \A 1: div.rec-first {\A 2:     background-color: $rec-first-header-color;\A 3:     background-image: -webkit-linear-gradient(left, #4998a1, #2e828b);\A 4:     background-image: -moz-linear-gradient(left, #4998a1, #2e828b);\A 5:     background-image: linear-gradient(90deg, #4998a1, #2e828b);\A 6:     >i.box-icon-first {\A 7:         background-position: -190px -96px;"; }
+  content: "Error: Undefined variable: \"$rec-first-header-color\".\A         on line 2 of E:\codes\blog\src\sass\modules\recSepHeader.scss\A \A 1: .rec-first {\A 2:     background-color: $rec-first-header-color;\A 3:     background-image: -webkit-linear-gradient(left, #4998a1, #2e828b);\A 4:     background-image: -moz-linear-gradient(left, #4998a1, #2e828b);\A 5:     background-image: linear-gradient(90deg, #4998a1, #2e828b);\A 6:     >i.box-icon-first {\A 7:         background-position: -190px -96px;"; }

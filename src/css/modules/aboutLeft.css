@@ -2,7 +2,7 @@
 Error: Undefined variable: "$left-width".
         on line 3 of E:\codes\blog\src\sass\modules\aboutLeft.scss
 
-1: >article.about-left {
+1: >.about-left {
 2:         float: left;
 3:         width: $left-width;
 4:         border-image: url("../images/hr-bg.png");
@@ -59,4 +59,4 @@ D:/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$left-width\".\A         on line 3 of E:\codes\blog\src\sass\modules\aboutLeft.scss\A \A 1: >article.about-left {\A 2:         float: left;\A 3:         width: $left-width;\A 4:         border-image: url(\"../images/hr-bg.png\");\A 5:         h5 {\A 6:             width: 100px;\A 7:             margin: 10px auto;\A 8:             text-align: center;"; }
+  content: "Error: Undefined variable: \"$left-width\".\A         on line 3 of E:\codes\blog\src\sass\modules\aboutLeft.scss\A \A 1: >.about-left {\A 2:         float: left;\A 3:         width: $left-width;\A 4:         border-image: url(\"../images/hr-bg.png\");\A 5:         h5 {\A 6:             width: 100px;\A 7:             margin: 10px auto;\A 8:             text-align: center;"; }

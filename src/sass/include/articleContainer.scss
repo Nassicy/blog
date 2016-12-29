@@ -1,4 +1,4 @@
-section.article-list-img-content{
+.article-list-img-content{
     height:240px;
     margin-top:20px;
     background:url("../images/article-bg.jpg");
@@ -15,11 +15,11 @@ section.article-list-img-content{
         background: rgba(0, 0, 0, 0.6);
     }
 }
-section.art-details-img-content{
+.art-details-img-content{
     background:url("../images/tm-contact-img.jpg");
     background-size:100%;
 }
-section.article-container {
+.article-container {
     width: $page-container-width;
     display:flex;
     height: 950px;

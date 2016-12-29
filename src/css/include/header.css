@@ -5,14 +5,14 @@ Error: Undefined variable: "$page-container-width".
 1: 
 2: 
 3: 
-4: header#header {
+4: #header {
 5:     width: 100%;
 6:     min-width: $page-container-width;
 7:     height: $header-height;
 8:     background: $header-bg;
 9:     border-top: 3px solid $header-border-color;
 10:     box-shadow: $header-box-shadow;
-11:     >div.navbar-container {
+11:     >.navbar-container {
 
 Backtrace:
 E:\codes\blog\src\sass\include\header.scss:6
@@ -62,4 +62,4 @@ D:/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$page-container-width\".\A         on line 6 of E:\codes\blog\src\sass\include\header.scss\A \A 1: \A 2: \A 3: \A 4: header#header {\A 5:     width: 100%;\A 6:     min-width: $page-container-width;\A 7:     height: $header-height;\A 8:     background: $header-bg;\A 9:     border-top: 3px solid $header-border-color;\A 10:     box-shadow: $header-box-shadow;\A 11:     >div.navbar-container {"; }
+  content: "Error: Undefined variable: \"$page-container-width\".\A         on line 6 of E:\codes\blog\src\sass\include\header.scss\A \A 1: \A 2: \A 3: \A 4: #header {\A 5:     width: 100%;\A 6:     min-width: $page-container-width;\A 7:     height: $header-height;\A 8:     background: $header-bg;\A 9:     border-top: 3px solid $header-border-color;\A 10:     box-shadow: $header-box-shadow;\A 11:     >.navbar-container {"; }

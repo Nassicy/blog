@@ -1,6 +1,6 @@
 
 
-footer#footer {
+#footer {
     width: 100%;
     min-width: $page-container-width;
     height: 150px;
@@ -32,7 +32,7 @@ footer#footer {
             float: left;
             width: 400px;
             margin-right: 20px;
-            li.friend-link {
+            .friend-link {
                 border-bottom: 1px solid #fff;
                 label {
                     margin-right: 10px;

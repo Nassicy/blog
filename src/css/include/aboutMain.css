@@ -2,10 +2,10 @@
 Error: Undefined variable: "$page-container-width".
         on line 5 of E:\codes\blog\src\sass\include\aboutMain.scss
 
-1: section.outwrap-about{
+1: .outwrap-about{
 2:     background-color:#f3f5f7;
 3:     padding-bottom:30px;
-4:     >section.about-main {
+4:     >.about-main {
 5:         width: $page-container-width;
 6:         margin:0 auto;
 7:         padding-top:30px;
@@ -72,4 +72,4 @@ D:/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$page-container-width\".\A         on line 5 of E:\codes\blog\src\sass\include\aboutMain.scss\A \A 1: section.outwrap-about{\A 2:     background-color:#f3f5f7;\A 3:     padding-bottom:30px;\A 4:     >section.about-main {\A 5:         width: $page-container-width;\A 6:         margin:0 auto;\A 7:         padding-top:30px;\A 8:         @import '../modules/aboutLeft';\A 9:         @import '../modules/aboutRight';\A 10:     }"; }
+  content: "Error: Undefined variable: \"$page-container-width\".\A         on line 5 of E:\codes\blog\src\sass\include\aboutMain.scss\A \A 1: .outwrap-about{\A 2:     background-color:#f3f5f7;\A 3:     padding-bottom:30px;\A 4:     >.about-main {\A 5:         width: $page-container-width;\A 6:         margin:0 auto;\A 7:         padding-top:30px;\A 8:         @import '../modules/aboutLeft';\A 9:         @import '../modules/aboutRight';\A 10:     }"; }

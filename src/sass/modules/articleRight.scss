@@ -1,8 +1,8 @@
-div.article-right{
+.article-right{
     float:left;
     width:$right-width;
     margin-left:$right-margin-left;
-    aside.list-content{
+    .list-content{
         margin:0 0 20px 10px;
         background-color:#fff;
         border:1px solid #ddd;
@@ -20,8 +20,8 @@ div.article-right{
             }
         }
     }
-    aside.search-container{
-        >div.search-group{
+    .search-container{
+        >.search-group{
             padding:$article-right-content-padding-width;
             input,span{
                 display:inline-block;
@@ -46,8 +46,8 @@ div.article-right{
 
         }
     }
-    aside.tags-list{
-        >div.tags-content{
+    .tags-list{
+        >.tags-content{
             padding:$article-right-content-padding-width;
             a{
                 display:inline-block;
@@ -62,7 +62,7 @@ div.article-right{
             }
         }
     }
-    aside.month-ranking-list{
+    .month-ranking-list{
         >ul{
             padding:$article-right-content-padding-width;
             li{
@@ -101,7 +101,7 @@ div.article-right{
             }
         }
     }
-    aside.latest-list{
+    .latest-list{
         >ul{
             li{
                 height:30px;

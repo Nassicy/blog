@@ -1,7 +1,7 @@
-div.article-left {
+.article-left {
     float:left;
     width: $left-width;
-    article.article-list {
+    .article-list {
         display: flex;
         display-direction: column;
         width: 100%;
@@ -13,7 +13,7 @@ div.article-left {
         &:hover {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
-        aside.article-img {
+        .article-img {
             float:left;
             flex: 1;
             position: relative;
@@ -36,7 +36,7 @@ div.article-left {
                 background: rgba(0, 0, 0, 0.5);
             }
         }
-        aside.article-content {
+        .article-content {
             float:left;
             width:68%;
             flex: 2;
@@ -84,11 +84,10 @@ div.article-left {
         }
     }
 }
-
-div.art-details-left {
+.art-details-left {
     float:left;
     width: $left-width;
-    article.art-details-content {
+    .art-details-content {
 
         h4 {
             color: #e16c46;

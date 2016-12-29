@@ -3,11 +3,11 @@ Error: Undefined variable: "$right-width".
         on line 4 of E:\codes\blog\src\sass\modules\aboutRight.scss
 
 1: 
-2: >section.about-right {/*右侧部分*\/
+2: >.about-right {/*右侧部分*\/
 3:     float: left;
 4:     width: $right-width;
 5:     margin-left: $right-margin-left;
-6:     >div.s-modules {
+6:     >.about-modules {
 7:         h5 {
 8:             width: 80%;
 9:             height: 36px;
@@ -60,4 +60,4 @@ D:/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$right-width\".\A         on line 4 of E:\codes\blog\src\sass\modules\aboutRight.scss\A \A 1: \A 2: >section.about-right {/*右侧部分*/\A 3:     float: left;\A 4:     width: $right-width;\A 5:     margin-left: $right-margin-left;\A 6:     >div.s-modules {\A 7:         h5 {\A 8:             width: 80%;\A 9:             height: 36px;"; }
+  content: "Error: Undefined variable: \"$right-width\".\A         on line 4 of E:\codes\blog\src\sass\modules\aboutRight.scss\A \A 1: \A 2: >.about-right {/*右侧部分*/\A 3:     float: left;\A 4:     width: $right-width;\A 5:     margin-left: $right-margin-left;\A 6:     >.about-modules {\A 7:         h5 {\A 8:             width: 80%;\A 9:             height: 36px;"; }

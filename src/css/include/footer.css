@@ -4,7 +4,7 @@ Error: Undefined variable: "$page-container-width".
 
 1: 
 2: 
-3: footer#footer {
+3: #footer {
 4:     width: 100%;
 5:     min-width: $page-container-width;
 6:     height: 150px;
@@ -61,4 +61,4 @@ D:/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$page-container-width\".\A         on line 5 of E:\codes\blog\src\sass\include\footer.scss\A \A 1: \A 2: \A 3: footer#footer {\A 4:     width: 100%;\A 5:     min-width: $page-container-width;\A 6:     height: 150px;\A 7:     color: #fff;\A 8:     background-color: rgba(7, 17, 27, 0.8);\A 9:     clear:both;\A 10:     >.footer-container {"; }
+  content: "Error: Undefined variable: \"$page-container-width\".\A         on line 5 of E:\codes\blog\src\sass\include\footer.scss\A \A 1: \A 2: \A 3: #footer {\A 4:     width: 100%;\A 5:     min-width: $page-container-width;\A 6:     height: 150px;\A 7:     color: #fff;\A 8:     background-color: rgba(7, 17, 27, 0.8);\A 9:     clear:both;\A 10:     >.footer-container {"; }

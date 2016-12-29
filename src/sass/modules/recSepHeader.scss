@@ -1,4 +1,4 @@
-div.rec-first {
+.rec-first {
     background-color: $rec-first-header-color;
     background-image: -webkit-linear-gradient(left, #4998a1, #2e828b);
     background-image: -moz-linear-gradient(left, #4998a1, #2e828b);
@@ -10,13 +10,13 @@ div.rec-first {
     }
 }
 
-div.rec-first+div.rec-content {
+.rec-first+div.rec-content {
     a {
         color: $rec-first-header-color;
     }
 }
 
-div.rec-second {
+.rec-second {
     background: $rec-second-header-color;
     background-image: -webkit-linear-gradient(left, #7d2e5c, #6f184a);
     background-image: -moz-linear-gradient(left, #7d2e5c, #6f184a);
@@ -27,14 +27,13 @@ div.rec-second {
         height: 24px;
     }
 }
-
-div.rec-second+div.rec-content {
+.rec-second+div.rec-content {
     a {
         color: $rec-second-header-color;
     }
 }
 
-div.rec-third {
+.rec-third {
     background: $rec-third-header-color;
     background-image: -webkit-linear-gradient(left, #e77005, #e45d04);
     background-image: -moz-linear-gradient(left, #e77005, #e45d04);
@@ -46,7 +45,7 @@ div.rec-third {
     }
 }
 
-div.rec-third+div.rec-content {
+.rec-third+div.rec-content {
     a {
         color: $rec-third-header-color;
     }
