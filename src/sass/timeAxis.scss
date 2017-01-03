@@ -2,7 +2,7 @@
 * @Author: dongying
 * @Date:   2016-12-29 14:59:47
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-12-30 15:44:49
+* @Last Modified time: 2017-01-03 10:02:21
 */
 
 $page-width:1300px;
@@ -107,7 +107,7 @@ body {
 .list {
     position:relative;
     overflow-y:hidden;
-    padding-bottom:20px;
+    padding-bottom:35px;
     -webkit-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;
     -moz-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;
     -ms-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;

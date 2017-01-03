@@ -12,6 +12,9 @@ body a{
     -o-transition: 0.5s all ease;
     -ms-transition: 0.5s all ease;
 }
+*{
+    -webkit-tap-highlight-color: transparent;
+ }
 .clearfix{
     &:after{
         content:".";

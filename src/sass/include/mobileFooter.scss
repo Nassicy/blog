@@ -1,0 +1,47 @@
+$active-color:#cd375e;
+$unactive-color:#acacac;
+footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:1.25rem;
+    border-top: 1px solid #c0c0c0;
+    background-color: #f6f6f6;
+    >ul{
+        display: flex;
+        display:-webkit-flex;
+        flex-flow:row;
+        >li{
+            flex:1;
+            text-align: center;
+            padding:0.15rem;
+            cursor:pointer;
+            >a{
+                color:$unactive-color;
+                letter-spacing: 2px;
+                    cursor:pointer;
+                span,i{
+                    display:block;
+                        cursor:pointer;
+                }
+                i{
+                    font-size:0.55rem;
+                }
+                span{
+                    margin-top:0.05rem;
+                    font-size:0.35rem;
+                }
+            }
+        }
+        >li.active{
+            >a{
+                i{
+                    color:$active-color;
+                }
+                span{
+                    color:$active-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,185 @@
+/*
+* @Author: anchen
+* @Date:   2017-01-03 10:21:19
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-01-03 14:48:43
+*/
+body {
+  font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
+  font-size: 14px;
+  box-sizing: border-box;
+  background: #f8f8f8; }
+
+body a {
+  outline: none;
+  transition: 0.5s all ease;
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  -ms-transition: 0.5s all ease; }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+.navbar-box .menu-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 0.5rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  line-height: 0.65rem;
+  padding: 0.15rem 0.15rem 0.15rem 0.2rem;
+  background: #7e3b3c;
+  text-align: center;
+  border-radius: 0.25rem; }
+  .navbar-box .menu-btn i {
+    color: #fff;
+    font-size: 0.55rem;
+    letter-spacing: 4px;
+    line-height: 0.65rem; }
+.navbar-box .navbar {
+  display: none;
+  -webkit-transform: translate(0rem, 0rem);
+  -ms-transform: translate(0rem, 0rem);
+  -moz-transform: translate(0rem, 0rem);
+  -o-transform: translate(0rem, 0rem);
+  transform: translate(0rem, 0rem);
+  -webkit-transition: all 350ms;
+  -ms-transition: all 350ms;
+  -moz-transition: all 350ms;
+  -o-transition: all 350ms;
+  transition: all 350ms;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  top: 0;
+  -webkit-transform: translate(0rem, 0rem);
+  -ms-transform: translate(0rem, 0rem);
+  -moz-transform: translate(0rem, 0rem);
+  -o-transform: translate(0rem, 0rem);
+  transform: translate(0rem, 0rem); }
+  .navbar-box .navbar .navbar-list {
+    width: 5.0rem;
+    height: 100%;
+    padding-top: 0.5rem;
+    background: #fff;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden; }
+    .navbar-box .navbar .navbar-list > li {
+      cursor: pointer;
+      opacity: 0;
+      -webkit-transition: all .4s;
+      -ms-transition: all .4s;
+      -moz-transition: all .4s;
+      -o-transition: all .4s;
+      transition: all .4s;
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transform: translateX(-100%); }
+      .navbar-box .navbar .navbar-list > li > a {
+        color: #acacac;
+        display: block;
+        height: 1.0rem;
+        line-height: 1rem;
+        padding-left: 0.75rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+        .navbar-box .navbar .navbar-list > li > a i, .navbar-box .navbar .navbar-list > li > a span {
+          vertical-align: middle;
+          display: inline-block; }
+        .navbar-box .navbar .navbar-list > li > a i {
+          font-size: 0.6rem; }
+        .navbar-box .navbar .navbar-list > li > a span {
+          font-size: 0.4rem;
+          margin-left: 0.5rem; }
+    .navbar-box .navbar .navbar-list li.on {
+      border-left: 0.1rem solid #7e3b3c; }
+      .navbar-box .navbar .navbar-list li.on > a {
+        color: #fff;
+        background: rgba(126, 59, 60, 0.62); }
+.navbar-box .navbar.navbar-open {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  transition: all 300ms;
+  -webkit-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+  .navbar-box .navbar.navbar-open .navbar-list > li {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+  .navbar-box .navbar.navbar-open .navbar-list li:nth-child(2) {
+    transition-delay: 160ms; }
+  .navbar-box .navbar.navbar-open .navbar-list li:nth-child(3) {
+    transition-delay: 320ms; }
+  .navbar-box .navbar.navbar-open .navbar-list li:nth-child(4) {
+    transition-delay: 480ms; }
+  .navbar-box .navbar.navbar-open .navbar-list li:nth-child(5) {
+    transition-delay: 600ms; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 1.25rem;
+  border-top: 1px solid #c0c0c0;
+  background-color: #f6f6f6; }
+  footer > ul {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row; }
+    footer > ul > li {
+      flex: 1;
+      text-align: center;
+      padding: 0.15rem;
+      cursor: pointer; }
+      footer > ul > li > a {
+        color: #acacac;
+        letter-spacing: 2px;
+        cursor: pointer; }
+        footer > ul > li > a span, footer > ul > li > a i {
+          display: block;
+          cursor: pointer; }
+        footer > ul > li > a i {
+          font-size: 0.55rem; }
+        footer > ul > li > a span {
+          margin-top: 0.05rem;
+          font-size: 0.35rem; }
+    footer > ul > li.active > a i {
+      color: #cd375e; }
+    footer > ul > li.active > a span {
+      color: #cd375e; }

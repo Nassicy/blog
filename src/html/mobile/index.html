@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>手机端首页</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="Keywords" content="个人博客,blog,java,html5,css3">
+        <link rel="stylesheet" type="text/css" href="../../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="../../css/mobile.css">
+        <script type="text/javascript" src="../../js/flexible.js"></script>
+    </head>
+    <body>
+        <div class="navbar-box">
+            <div class="menu-btn" id="menu"><i class="fa  fa-bars"></i></div>
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="on">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa   fa-h-square"></i>
+                        <span>前端</span>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa   fa-bug"></i>
+                            <span>后端</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa  fa-pinterest"></i>
+                            <span>数据库</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-user"></i>
+                            <span>关于作者</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <footer>
+            <ul>
+                <li class="active">
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li>
+                <a href="javascript:void(0)">
+                    <i class="fa  fa-list"></i>
+                    <span>列表</span>
+                </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-search"></i>
+                        <span>搜索</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-user"></i>
+                        <span>我的</span>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+    </body>
+    <script type="text/javascript">
+        $(function(){
+            $(".menu-btn").bind('click',function(){
+                $(".navbar").addClass("navbar-open").show();
+                // $(".navbar-open li:nth-child(2)").css("transform"," translateX(0)");
+            });
+            $(document).bind('click', function(e) {
+              var e = e || window.event; //浏览器兼容性
+              var elem = e.target || e.srcElement;
+              while (elem) {
+                //循环判断至跟节点，防止点击的是div子元素
+                if (elem.id && elem.id == 'menu') {
+                  return;
+                }
+                elem = elem.parentNode;
+              }
+              //点击的不是div或其子元素
+              $(".navbar").removeClass("navbar-open").hide();
+            });
+        });
+    </script>
+</html>
