@@ -1,105 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>手机端首页</title>
-        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-        <meta content="yes" name="apple-mobile-web-app-capable">
-        <meta content="black" name="apple-mobile-web-app-status-bar-style">
-        <meta content="telephone=no" name="format-detection">
-        <meta name="Keywords" content="个人博客,blog,java,html5,css3">
-        <link rel="stylesheet" type="text/css" href="../../css/base.css">
-        <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
-        <link rel="stylesheet" type="text/css" href="../../css/mobile.css">
-        <script type="text/javascript" src="../../js/flexible.js"></script>
-    </head>
-    <body>
-        <div class="navbar-box">
-            <div class="menu-btn" id="menu"><i class="fa  fa-bars"></i></div>
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="on">
-                        <a href="javascript:void(0)">
-                            <i class="fa fa-home"></i>
-                            <span>首页</span>
-                        </a>
-                    </li>
-                    <li>
-                    <a href="javascript:void(0)">
-                        <i class="fa   fa-h-square"></i>
-                        <span>前端</span>
-                    </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="fa   fa-bug"></i>
-                            <span>后端</span>
-                        </a>
-                    </li>
-                     <li>
-                        <a href="javascript:void(0)">
-                            <i class="fa  fa-pinterest"></i>
-                            <span>数据库</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="fa fa-user"></i>
-                            <span>关于作者</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <footer>
-            <ul>
-                <li class="active">
+
+<head>
+    <meta charset="utf-8">
+    <title>手机端首页</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="Keywords" content="个人博客,blog,java,html5,css3">
+    <link rel="stylesheet" type="text/css" href="../../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mobile.css">
+    <script type="text/javascript" src="../../js/flexible.js"></script>
+</head>
+
+<body>
+    <!--菜单栏[[-->
+    <section class="navbar-box">
+        <div class="menu-btn" id="menu"><i class="fa  fa-bars"></i></div>
+        <nav class="navbar" id="navMenu">
+            <ul class="navbar-list">
+                <li class="on">
                     <a href="javascript:void(0)">
                         <i class="fa fa-home"></i>
                         <span>首页</span>
                     </a>
                 </li>
                 <li>
-                <a href="javascript:void(0)">
-                    <i class="fa  fa-list"></i>
-                    <span>列表</span>
-                </a>
+                    <a href="javascript:void(0)">
+                        <i class="fa   fa-h-square"></i>
+                        <span>前端</span>
+                    </a>
                 </li>
                 <li>
                     <a href="javascript:void(0)">
-                        <i class="fa fa-search"></i>
-                        <span>搜索</span>
+                        <i class="fa   fa-bug"></i>
+                        <span>后端</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa  fa-pinterest"></i>
+                        <span>数据库</span>
                     </a>
                 </li>
                 <li>
                     <a href="javascript:void(0)">
                         <i class="fa fa-user"></i>
-                        <span>我的</span>
+                        <span>关于作者</span>
                     </a>
                 </li>
             </ul>
-        </footer>
-        <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
-    </body>
-    <script type="text/javascript">
-        $(function(){
-            $(".menu-btn").bind('click',function(){
-                $(".navbar").addClass("navbar-open").show();
-                // $(".navbar-open li:nth-child(2)").css("transform"," translateX(0)");
-            });
-            $(document).bind('click', function(e) {
-              var e = e || window.event; //浏览器兼容性
-              var elem = e.target || e.srcElement;
-              while (elem) {
-                //循环判断至跟节点，防止点击的是div子元素
-                if (elem.id && elem.id == 'menu') {
-                  return;
-                }
-                elem = elem.parentNode;
-              }
-              //点击的不是div或其子元素
-              $(".navbar").removeClass("navbar-open").hide();
-            });
+            <div class="navbar-right"></div>
+        </nav>
+    </section>
+    <!--菜单栏]]-->
+    <!--轮播图[[-->
+    <section id="slider">
+        <div id="overflow">
+            <a href="javascript:void(0)" class="slide-move"></a>
+            <a href="javascript:void(0)" id="slide1" class="slide-num"></a>
+            <a href="javascript:void(0)" id="slide2" class="slide-num"></a>
+            <a href="javascript:void(0)" id="slide3" class="slide-num"></a>
+            <a href="javascript:void(0)" id="slide4" class="slide-num"></a>
+            <div class="inner" id="img-box">
+                <img src="../../images/banner1.png" title="banner1">
+                <img src="../../images/banner2.png" title="banner2">
+                <img src="../../images/banner3.png" title="banner3">
+                <img src="../../images/banner4.png" title="banner4">
+            </div>
+        </div>
+    </section>
+    <!--轮播图]]-->
+    <!--搜索框[[-->
+    <section class="search-box">
+        <input type="text" placeholder="请输入关键字" name=""/>
+        <i class="fa fa-search"></i>
+    </section>
+    <!--搜索框]]-->
+    <!--文章列表[[-->
+    <section class="intro-box">
+
+    </section>
+    <!--文章列表]]-->
+    <!--页脚[[-->
+    <section class="footer-box">
+        <h2><a href="#slider">回到顶部<i class="fa fa-caret-up"></i></a></h2>
+        <section class="icp-box">
+             <p>Copyright &copy;2016 遇见更好地自己</p>
+        </section>
+    </section>
+
+    <!--页脚]]-->
+    <!--底部菜单[[-->
+    <footer>
+        <ul>
+            <li class="active">
+                <a href="javascript:void(0)">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="fa  fa-list"></i>
+                    <span>列表</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="fa fa-search"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="fa fa-user"></i>
+                    <span>我的</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <!--底部菜单]]-->
+    <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+</body>
+<script type="text/javascript">
+$(function() {
+    $(".menu-btn").bind('click', function() {
+        $(".navbar").addClass("navbar-open").show();
+    });
+    $(".navbar-right").bind('click', function(e) {
+        var evt = e || window.event; //浏览器兼容性
+        var elem = evt.target || evt.srcElement;
+        if ($(elem).children('.navbar-list').length == 0) {
+            $(".navbar").removeClass("navbar-open").hide();
+        }
+    });
+    $("#slider .slide-num").each(function(i,e){
+        $(e).bind('mouseover',function(){
+            $(".slide-move").hide();
+            $(".slide-move").css("animation-play-state","paused");
+            $(".inner").css("animation-play-state","paused");
         });
-    </script>
+        $(e).bind('mouseout',function(){
+            $(".slide-move").show();
+            $(".slide-move").css("animation-play-state","running");
+            $(".inner").css("animation-play-state","running");
+        });
+    });
+});
+</script>
+
 </html>

@@ -1,9 +1,16 @@
 /*
-* @Author: anchen
+* @Author: dongying
 * @Date:   2017-01-03 10:21:19
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-01-03 14:48:43
+* @Last Modified time: 2017-01-04 17:50:08
 */
+
 @import 'include/global';
+body{
+    background:#f3f6f7;
+}
 @import 'include/mobileNav';
-@import 'include/mobileFooter';
+@import 'include/mobileSlider';
+@import 'include/mobileSearch';
+@import 'include/mobileFoot';
+@import 'include/mobileFootMenu';

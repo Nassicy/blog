@@ -1,0 +1,29 @@
+@import 'helper';
+$footer-h2-bg:#a93931;
+.footer-box{
+    margin-top:0.25rem;
+    letter-spacing: 0.025rem;
+    h2{
+        width:100%;
+        height:1.0rem;
+        line-height: 1.0rem;
+        background:$footer-h2-bg;
+        a{
+            float:right;
+            display:inline-block;
+            margin-right:5%;
+            color:#fff;
+            font-size:0.4rem;
+            i{
+                margin-left:0.25rem;
+            }
+        }
+    }
+    .icp-box{
+        margin-top:0.25rem;
+        text-align: center;
+        font-size:0.35rem;
+        color:#666;
+
+    }
+}

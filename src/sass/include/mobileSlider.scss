@@ -1,0 +1,208 @@
+$sLabel-color:#e77005;
+#slider {
+    max-width: 100%;
+    position: relative;
+    #overflow {
+        width: 100%;
+        height: 3.75rem;
+        overflow: hidden;
+        #img-box{
+            width: 400%;
+            height: 100%;
+            img {
+                width: 25%;
+                height: 100%;
+                float: left;
+            }
+        }
+        .inner {
+            animation: imgRun 15s infinite linear;
+            -webkit-animation: imgRun 15s infinite linear;
+            -moz-animation: imgRun 15s infinite linear;
+            -o-animation: imgRun 15s infinite linear;
+            -ms-animation: imgRun 15s infinite linear;
+        }
+        >a {
+            background: #CCC;
+            display: inline-block;
+            cursor: pointer;
+            width: 0.25rem;
+            height: 0.25rem;
+            border-radius: 0.125rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0.25rem;
+            z-index: 1;
+        }
+        a.slide-move {
+            background: $sLabel-color;
+            z-index: 99;
+            animation: runPage 15s infinite linear;
+            -webkit-animation: runPage 15s infinite linear;
+            -moz-animation: runPage 15s infinite linear;
+            -o-animation: runPage 15s infinite linear;
+            -ms-animation: runPage 15s infinite linear;
+        }
+        a:nth-of-type(2) {
+            left: 40%;
+        }
+        a:nth-of-type(3) {
+            left: 45%;
+        }
+        a:nth-of-type(5) {
+            left: 55%;
+        }
+
+    }
+}
+#slide1:hover~.inner{
+            animation: movetoFirst .5s ease-out forwards;
+        }
+        #slide2:hover~.inner {
+            animation: movetoSecond .5s ease-out forwards;
+        }
+        #slide3:hover~.inner {
+            animation: movetoThird .5s ease-out forwards;
+        }
+        #slide4:hover ~.inner {
+            animation: movetoFourth .5s ease-out forwards;
+        }
+@keyframes movetoFirst {
+    100% {
+        margin-left: -0;
+    }
+}
+
+@keyframes movetoSecond {
+    100% {
+        margin-left: -100%;
+    }
+}
+
+@keyframes movetoThird {
+    100% {
+        margin-left: -200%;
+    }
+}
+
+@keyframes movetoFourth {
+    100% {
+        margin-left: -300%;
+    }
+}
+
+@-webkit-keyframes movetoFirst {
+    100% {
+        margin-left: -0;
+    }
+}
+
+@-webkit-keyframes movetoSecond {
+    100% {
+        margin-left: -100%;
+    }
+}
+
+@-webkit-keyframes movetoThird {
+    100% {
+        margin-left: -200%;
+    }
+}
+
+@-webkit-keyframes movetoFourth {
+    100% {
+        margin-left: -300%;
+    }
+}
+
+@keyframes imgRun {
+    0%,
+    20% {
+        margin-left: 0;
+    }
+    25%,
+    40% {
+        margin-left: -100%;
+    }
+    45%,
+    60% {
+        margin-left: -200%;
+    }
+    65%,
+    80% {
+        margin-left: -300%;
+    }
+    85%,
+    100% {
+        margin-left: 0;
+    }
+}
+
+@-webkit-keyframes imgRun {
+    0%,
+    20% {
+        margin-left: 0;
+    }
+    25%,
+    40% {
+        margin-left: -400px;
+    }
+    45%,
+    60% {
+        margin-left: -200%;
+    }
+    65%,
+    80% {
+        margin-left: -300%;
+    }
+    85%,
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes runPage {
+    0%,
+    20% {
+        left: 40%;
+    }
+    25%,
+    40% {
+        left: 45%;
+    }
+    45%,
+    60% {
+        left: 50%;
+    }
+    65%,
+    80% {
+        left: 55%;
+    }
+    85%,
+    100% {
+        left: 40%;
+    }
+}
+
+@-webkit-keyframes runPage {
+    0%,
+    20% {
+        left: 40%;
+    }
+    25%,
+    40% {
+        left: 45%;
+    }
+    45%,
+    60% {
+        left: 50%;
+    }
+    65%,
+    80% {
+        left: 55%;
+    }
+    85%,
+    100% {
+        left: 40%;
+    }
+}

@@ -11,6 +11,8 @@ var gutil=require("gulp-util");
 var watchPath=require("gulp-watch-path");
 var streamCombiner=require("stream-combiner2");
 var autoprefixer=require("gulp-autoprefixer");
+var fs=require("fs");
+var replace=require("gulp-replace");
 
 
 //控制台颜色
@@ -49,6 +51,7 @@ gulp.task('fileinclude',function(){
             }))
         .pipe(gulp.dest('dist/html/'));
 });
+
 /*首页*/
 gulp.task('indexFile',function(){
     gulp.src(['src/index.html'])
@@ -72,13 +75,13 @@ gulp.task("watchHtml",function(){
 //编译css
 gulp.task("minifyCss",function(){
     gulp.src(['src/css/**/*','!src/css/include/*.css'])
-        //.pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe(autoprefixer({
             browsers:'last 2 versions',
             cascade:true,
             remove:true
         }))
-        //.pipe(sourcemaps.write('./'))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('dist/css/'));
 });
 gulp.task('watchcss', function () {
@@ -88,14 +91,14 @@ gulp.task('watchcss', function () {
         gutil.log('Dist ' + paths.distPath)
 
         gulp.src(paths.srcPath)
-            //.pipe(sourcemaps.init())
+            .pipe(sourcemaps.init())
             .pipe(autoprefixer({
               browsers: 'last 2 versions',
               cascade:true,
               remove:true
             }))
             //.pipe(minifycss())
-            //.pipe(sourcemaps.write('./'))
+            .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest(paths.distDir))
     })
 });
@@ -131,11 +134,7 @@ gulp.task("uglifyJs",function(){
     ])
     combined.on('error',handleError);
 });
-//复制ueditor文件夹
-gulp.task("copyUeditor",function(){
-    gulp.src("src/js/ueditor/**/*")
-        .pipe(gulp.dest("dist/js/ueditor/"))
-    });
+
 //编译并压缩image
  gulp.task("image",function(){
     gulp.src('src/images/**/*')
@@ -153,10 +152,11 @@ gulp.task("copyFonts",function(){
 
 //实时监听
 gulp.task("watch",function(){
-    gulp.watch('src/js/**/*',['uglifyJs']);
-    gulp.watch('src/images/**/*',['image']);
-    gulp.watch('src/fonts/**/*',['copyFonts']);
+    gulp.watch('js/**/*',['uglifyJs']);
+    gulp.watch('images/**/*',['image']);
+    gulp.watch('fonts/**/*',['copyFonts']);
+    gulp.watch(['src/html/include/header.html','./html/include/footer.html'],['include']);
     gulp.watch('dist/**/*.*').on('change', browserSync.reload);
 })
 
-gulp.task('default',['watchHtml','minifyCss','uglifyJs','image','copyFonts','watchsass','watchcss','server','fileinclude','indexFile','watch','copyUeditor']);
+gulp.task('default',['watchHtml','minifyCss','uglifyJs','image','copyFonts','watchsass','watchcss','server','fileinclude','indexFile','watch']);
