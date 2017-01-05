@@ -2,7 +2,7 @@
 * @Author: dongying
 * @Date:   2017-01-03 10:21:19
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-01-04 17:50:08
+* @Last Modified time: 2017-01-05 14:20:44
 */
 body {
   font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
@@ -29,7 +29,8 @@ body a {
   clear: both; }
 
 body {
-  background: #f3f6f7; }
+  background: #f3f6f7;
+  overflow-x: hidden; }
 
 .navbar-box .menu-btn {
   position: fixed;
@@ -319,7 +320,7 @@ body {
     margin: 0.25rem 5%;
     border-radius: 0.15rem;
     font-size: 0.35rem; }
-  .search-box > i {
+  .search-box > i.fa-search {
     position: absolute;
     right: 7%;
     top: 0.25rem;
@@ -327,14 +328,114 @@ body {
     font-size: 0.5rem;
     color: #7d2e5c; }
 
-.footer-box {
+#query-condition {
+  background: #090909; }
+  #query-condition a {
+    position: absolute;
+    display: inline-block;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    top: 0.25rem;
+    margin-left: 0.25rem;
+    color: #fff;
+    font-size: 0.95rem; }
+  #query-condition input {
+    width: 85%;
+    margin-left: 10%;
+    background: #fff;
+    border: 1px solid #ccc; }
+  #query-condition i.fa-search {
+    color: #7d2e5c;
+    cursor: pointer; }
+
+.intro-box {
   margin-top: 0.25rem;
-  letter-spacing: 0.025rem; }
+  padding-bottom: 0.5rem;
+  background-color: #e7e7e7; }
+  .intro-box h2 {
+    height: 1.0rem;
+    line-height: 1.0rem;
+    width: 100%;
+    padding-left: 0.5rem;
+    background: #ccc9cb;
+    color: #fff;
+    font-size: 0.4rem;
+    letter-spacing: 0.025rem;
+    border-left: 0.15rem solid #e64005; }
+  .intro-box .article-list {
+    padding: 0 0.3rem;
+    width: 91%;
+    margin: 0.1rem 1.5%;
+    background: #fff;
+    border-radius: 0.1rem;
+    box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.25), 1px 0 2px rgba(0, 0, 0, 0.15); }
+    .intro-box .article-list h3 {
+      width: 100%;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      font-size: 0.4rem;
+      color: #3c3c3c; }
+      .intro-box .article-list h3 .artType {
+        display: inline-block;
+        background: #f17339;
+        color: #fff;
+        line-height: 0.6rem;
+        padding: 0 0.1rem;
+        margin-right: 0.25rem;
+        font-weight: lighter;
+        border-radius: 0.1rem; }
+    .intro-box .article-list .article-content {
+      display: flex;
+      display: -webkit-flex;
+      margin-bottom: 0.25rem;
+      padding-bottom: 0.25rem; }
+      .intro-box .article-list .article-content .art-left {
+        flex: 1;
+        margin: 0; }
+        .intro-box .article-list .article-content .art-left img {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.1rem;
+          box-shadow: 0px 0.05rem 0.2rem rgba(0, 0, 0, 0.5); }
+      .intro-box .article-list .article-content .art-right {
+        flex: 2;
+        padding-left: 0.15rem;
+        position: relative; }
+        .intro-box .article-list .article-content .art-right p {
+          color: #666;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          overflow: hidden; }
+        .intro-box .article-list .article-content .art-right ul {
+          position: absolute;
+          bottom: 0.25rem; }
+          .intro-box .article-list .article-content .art-right ul li {
+            display: inline-block;
+            color: #666;
+            margin-right: 0.25rem; }
+            .intro-box .article-list .article-content .art-right ul li span i {
+              margin-right: 0.1rem;
+              color: #666; }
+          .intro-box .article-list .article-content .art-right ul li:nth-child(1) span {
+            color: #74567b; }
+          .intro-box .article-list .article-content .art-right ul li:nth-child(2) span {
+            color: #ca3030; }
+          .intro-box .article-list .article-content .art-right ul li:nth-child(3) span {
+            color: #459263; }
+          .intro-box .article-list .article-content .art-right ul li:nth-child(4) span {
+            color: #4f87b1; }
+
+.footer-box {
+  /* margin-top:0.25rem;*/
+  letter-spacing: 0.025rem;
+  height: 5.0rem;
+  margin-bottom: 0.5rem; }
   .footer-box h2 {
     width: 100%;
     height: 1.0rem;
     line-height: 1.0rem;
-    background: #a93931; }
+    background: #a4a4a4; }
     .footer-box h2 a {
       float: right;
       display: inline-block;

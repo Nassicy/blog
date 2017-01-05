@@ -2,15 +2,17 @@
 * @Author: dongying
 * @Date:   2017-01-03 10:21:19
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-01-04 17:50:08
+* @Last Modified time: 2017-01-05 14:20:44
 */
 
 @import 'include/global';
 body{
     background:#f3f6f7;
+    overflow-x:hidden;
 }
 @import 'include/mobileNav';
 @import 'include/mobileSlider';
 @import 'include/mobileSearch';
+@import 'include/mobileArtList';
 @import 'include/mobileFoot';
 @import 'include/mobileFootMenu';

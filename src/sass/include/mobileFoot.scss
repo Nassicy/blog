@@ -1,8 +1,10 @@
 @import 'helper';
-$footer-h2-bg:#a93931;
+$footer-h2-bg:#a4a4a4;
 .footer-box{
-    margin-top:0.25rem;
+    /* margin-top:0.25rem;*/
     letter-spacing: 0.025rem;
+    height:5.0rem;
+    margin-bottom:0.5rem;
     h2{
         width:100%;
         height:1.0rem;
@@ -24,6 +26,5 @@ $footer-h2-bg:#a93931;
         text-align: center;
         font-size:0.35rem;
         color:#666;
-
     }
 }

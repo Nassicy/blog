@@ -13,12 +13,36 @@
         border-radius: 0.15rem;
         font-size:0.35rem;
     }
-    >i{
+    >i.fa-search{
         position:absolute;
         right:7%;
         top:0.25rem;
         line-height:0.9rem;
         font-size:0.5rem;
         color:#7d2e5c;
+    }
+}
+$search-color:#090909;
+#query-condition{
+    background:$search-color;
+    a{
+        position:absolute;
+        display: inline-block;
+        height:0.9rem;
+        line-height: 0.9rem;
+        top:0.25rem;
+        margin-left:0.25rem;
+        color:#fff;
+        font-size:0.95rem;
+    }
+    input{
+        width:85%;
+        margin-left:10%;
+        background:#fff;
+        border:1px solid #ccc;
+    }
+    i.fa-search{
+        color:#7d2e5c;
+        cursor:pointer;
     }
 }
