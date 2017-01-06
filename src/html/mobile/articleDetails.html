@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>文章详情页面</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="Keywords" content="个人博客,blog,java,html5,css3">
+    <link rel="stylesheet" type="text/css" href="../../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mobile.css">
+    <script type="text/javascript" src="../../js/flexible.js"></script>
+</head>
+
+<body>
+    <!--菜单栏[[-->
+    @@include("../include/mobileNav.html")
+    <!--菜单栏]]-->
+    <section class="article-title-box title-box">
+        <h2>
+            <a href="javascript:void(0)" onClick="javascript:history.go(-1);"><i class="fa  fa-angle-left"></i></a>
+            <span>文章详情页</span>
+            <i class="fa fa-share"></i>
+        </h2>
+    </section>
+    <!--详情页主体[[-->
+    <section class="article-detail-box">
+        <aside class="meta-info">
+            <span class="art-type">前端</span>
+            <span class="art-date">2017-1-5</span>
+        </aside>
+        <h3>2016年我最喜欢的前端工具</h3>
+        <aside class="art-info">
+            <span><i>作者:</i>IT工程师</span>
+            <span><i>浏览:</i>200</span>
+            <span class="source"><i>来源:</i><a href="javascript:void(0)">http://www.jianshu.com/p/778c7db3ea3d</a></span>
+        </aside>
+        <article class="art-content">
+            <img src="../../images/artDetails_1.jpg" alt="详情页图">
+            <p>
+                又是一年即将过去，正如我们所预期的一样，随着 大量涌入 的创新、 刺激 、 令人兴奋 的新工具和技术，Web 平台正呈现着爆炸式的发展态势继续前进。同时，我们的生活也变得如同开发人员一样，更加得简单。 React 和 Angular 等流行工具照旧进行着更新，而像 Vue.js 这样的新工具已崭露出了头角，并迅速地抓住了大量开发者的兴趣。 众所周知，由于我策划了一份专注于开发工具的 周刊 ，在研究的过程中我也遇上了一些荒谬的事情，所以我会更在意那些流行的工具。但是，对于既有趣又实用的，却被人们很少留意的工具，我依然表示赞赏。 所以， 就像去年一样 ，在本文中我将与大家分享，这一年里我最喜欢的一些专为前端开发者打造的工具。 Modaal 我总是感觉，像是那些具备无障碍特点的工具，在我们行业中往往都不被看好。所以，我将分享的第一个工具是一个灵活、易用的模态窗口插件。
+            </p>
+        </article>
+    </section>
+    <!--详情页主体]]-->
+    <!--页脚[[-->
+    @@include("../include/mobileFooter.html")
+    <!--页脚]]-->
+    <!--底部菜单[[-->
+    @@include("../include/mobileFooterMenu.html")
+    <!--底部菜单]]-->
+    <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="../../js/mobileScript.js"></script>
+</body>
+
+</html>

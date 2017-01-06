@@ -23,7 +23,7 @@ $art-right-li-fourthcolor:#4f87b1;
     .article-list{
         padding:0 0.3rem;
         width: 91%;
-        margin: 0.1rem 1.5%;
+        margin: 0.1rem auto;
         background:#fff;
         border-radius:0.1rem;
         box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.25), 1px 0 2px rgba(0, 0, 0, 0.15);
@@ -42,6 +42,7 @@ $art-right-li-fourthcolor:#4f87b1;
                 margin-right:0.25rem;
                 font-weight: lighter;
                 border-radius:0.1rem;
+                font-size:0.35rem;
             }
         }
         .article-content{

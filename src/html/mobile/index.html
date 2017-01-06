@@ -18,44 +18,7 @@
 
 <body>
     <!--菜单栏[[-->
-    <section class="navbar-box">
-        <div class="menu-btn" id="menu"><i class="fa  fa-bars"></i></div>
-        <nav class="navbar" id="navMenu">
-            <ul class="navbar-list">
-                <li class="on">
-                    <a href="javascript:void(0)">
-                        <i class="fa fa-home"></i>
-                        <span>首页</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <i class="fa   fa-h-square"></i>
-                        <span>前端</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <i class="fa   fa-bug"></i>
-                        <span>后端</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <i class="fa  fa-pinterest"></i>
-                        <span>数据库</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">
-                        <i class="fa fa-user"></i>
-                        <span>关于作者</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="navbar-right"></div>
-        </nav>
-    </section>
+    @@include("../include/mobileNav.html")
     <!--菜单栏]]-->
     <!--轮播图[[-->
     <section id="slider">
@@ -166,58 +129,18 @@
     </section>
     <!--文章列表]]-->
     <!--页脚[[-->
-    <section class="footer-box">
-        <h2><a href="#slider">回到顶部<i class="fa fa-caret-up"></i></a></h2>
-        <section class="icp-box">
-             <p>Copyright &copy;2016 遇见更好地自己</p>
-        </section>
-    </section>
+    @@include("../include/mobileFooter.html")
 
     <!--页脚]]-->
     <!--底部菜单[[-->
-    <footer>
-        <ul>
-            <li class="active">
-                <a href="javascript:void(0)">
-                    <i class="fa fa-home"></i>
-                    <span>首页</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0)">
-                    <i class="fa  fa-list"></i>
-                    <span>列表</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0)">
-                    <i class="fa fa-search"></i>
-                    <span>搜索</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0)">
-                    <i class="fa fa-user"></i>
-                    <span>我的</span>
-                </a>
-            </li>
-        </ul>
-    </footer>
+    @@include("../include/mobileFooterMenu.html")
+
     <!--底部菜单]]-->
     <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="../../js/mobileScript.js"></script>
 </body>
 <script type="text/javascript">
 $(function() {
-    $(".menu-btn").bind('click', function() {
-        $(".navbar").addClass("navbar-open").show();
-    });
-    $(".navbar-right").bind('click', function(e) {
-        var evt = e || window.event; //浏览器兼容性
-        var elem = evt.target || evt.srcElement;
-        if ($(elem).children('.navbar-list').length == 0) {
-            $(".navbar").removeClass("navbar-open").hide();
-        }
-    });
     $("#slider .slide-num").each(function(i,e){
         $(e).bind('mouseover',function(){
             $(".slide-move").hide();

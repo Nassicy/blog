@@ -1,8 +1,9 @@
+@charset "UTF-8";
 /*
 * @Author: dongying
 * @Date:   2017-01-03 10:21:19
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-01-05 14:20:44
+* @Last Modified time: 2017-01-06 14:14:30
 */
 body {
   font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
@@ -328,9 +329,14 @@ body {
     font-size: 0.5rem;
     color: #7d2e5c; }
 
-#query-condition {
-  background: #090909; }
-  #query-condition a {
+/*二级页面标题*/
+.title-box {
+  width: 100%;
+  height: 1.35rem;
+  background: #090909;
+  color: #fff;
+  position: relative; }
+  .title-box a {
     position: absolute;
     display: inline-block;
     height: 0.9rem;
@@ -339,14 +345,46 @@ body {
     margin-left: 0.25rem;
     color: #fff;
     font-size: 0.95rem; }
-  #query-condition input {
+  .title-box input {
     width: 85%;
     margin-left: 10%;
     background: #fff;
     border: 1px solid #ccc; }
-  #query-condition i.fa-search {
+  .title-box i.fa-search {
     color: #7d2e5c;
     cursor: pointer; }
+  .title-box h2 {
+    font-size: 0.55rem; }
+    .title-box h2 span {
+      display: inline-block;
+      position: absolute;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      top: 0.25rem;
+      left: 25%;
+      letter-spacing: 2px; }
+    .title-box h2 i.fa-share {
+      position: absolute;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      top: 0.25rem;
+      right: 5%; }
+
+/*推荐搜索条件*/
+.query-intro {
+  width: 90%;
+  margin: 0.3rem auto; }
+  .query-intro h3 {
+    margin-bottom: 0.15rem;
+    color: #666;
+    font-size: 0.3rem;
+    font-weight: normal; }
+  .query-intro .tag-box span {
+    display: inline-block;
+    line-height: 0.5rem;
+    padding: 0 0.25rem;
+    font-size: 0.35rem;
+    margin-bottom: 0.25rem; }
 
 .intro-box {
   margin-top: 0.25rem;
@@ -365,7 +403,7 @@ body {
   .intro-box .article-list {
     padding: 0 0.3rem;
     width: 91%;
-    margin: 0.1rem 1.5%;
+    margin: 0.1rem auto;
     background: #fff;
     border-radius: 0.1rem;
     box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.25), 1px 0 2px rgba(0, 0, 0, 0.15); }
@@ -383,7 +421,8 @@ body {
         padding: 0 0.1rem;
         margin-right: 0.25rem;
         font-weight: lighter;
-        border-radius: 0.1rem; }
+        border-radius: 0.1rem;
+        font-size: 0.35rem; }
     .intro-box .article-list .article-content {
       display: flex;
       display: -webkit-flex;
@@ -482,3 +521,57 @@ footer {
       color: #cd375e; }
     footer > ul > li.active > a span {
       color: #cd375e; }
+
+/*文章详情页*/
+.article-detail-box {
+  width: 92%;
+  margin: 0.5rem auto; }
+  .article-detail-box .meta-info {
+    width: 100%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    background-color: #f7f7f7; }
+    .article-detail-box .meta-info::after {
+      content: ".";
+      height: 0;
+      visibility: hidden;
+      display: block;
+      clear: both; }
+    .article-detail-box .meta-info span {
+      display: inline-block;
+      padding: 0 0.25rem; }
+    .article-detail-box .meta-info .art-type {
+      float: left;
+      background: #e6e6e6; }
+    .article-detail-box .meta-info .art-date {
+      float: right;
+      margin-right: 0.5rem; }
+  .article-detail-box h3 {
+    font-size: 0.5rem;
+    margin-top: 0.25rem; }
+  .article-detail-box .art-info {
+    color: #333; }
+    .article-detail-box .art-info span {
+      display: inline-block;
+      line-height: 0.55rem;
+      margin-right: 0.25rem; }
+      .article-detail-box .art-info span i {
+        font-style: normal;
+        margin-right: 0.1rem;
+        color: #666; }
+    .article-detail-box .art-info span.source {
+      display: block; }
+      .article-detail-box .art-info span.source a {
+        color: #333; }
+        .article-detail-box .art-info span.source a:hover {
+          color: #cd375e; }
+  .article-detail-box .art-content {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.35rem;
+    text-align: justify;
+    text-align-last: justify; }
+    .article-detail-box .art-content img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.1rem; }

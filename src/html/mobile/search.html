@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>搜索页面</title>
-        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-        <meta content="yes" name="apple-mobile-web-app-capable">
-        <meta content="black" name="apple-mobile-web-app-status-bar-style">
-        <meta content="telephone=no" name="format-detection">
-        <meta content="email=no" name="format-detection">
-        <meta name="Keywords" content="个人博客,blog,java,html5,css3">
-        <link rel="stylesheet" type="text/css" href="../../css/base.css">
-        <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
-        <link rel="stylesheet" type="text/css" href="../../css/mobile.css">
-        <script type="text/javascript" src="../../js/flexible.js"></script>
-    </head>
-    <body>
-        <!--搜索框[[-->
-        <section class="search-box" id="query-condition">
-            <a href="javascript:void(0)" onClick="javascript:history.go(-1);"><i class="fa  fa-angle-left"></i></a>
-            <input type="text" class="search-txt" placeholder="请输入关键字" name="" />
-            <i class="fa fa-search"></i>
+
+<head>
+    <meta charset="utf-8">
+    <title>搜索页面</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="Keywords" content="个人博客,blog,java,html5,css3">
+    <link rel="stylesheet" type="text/css" href="../../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mobile.css">
+    <script type="text/javascript" src="../../js/flexible.js"></script>
+</head>
+
+<body>
+    <!--搜索框[[-->
+    <section class="search-box title-box" id="query-condition">
+        <a href="javascript:void(0)" onClick="javascript:history.go(-1);"><i class="fa  fa-angle-left"></i></a>
+        <input type="text" class="search-txt" placeholder="请输入关键字" name="" />
+        <i class="fa fa-search"></i>
+    </section>
+    <!--搜索框]]-->
+    <!--搜索推荐[[-->
+    <section class="query-intro">
+        <h3>推荐搜索标签:</h3>
+        <section class="tag-box">
+            <span>Java</span>
+            <span>Jquery</span>
+            <span>MySql</span>
+            <span>Html5</span>
+            <span>Angularjs</span>
+            <span>SpringMVC</span>
+            <span>ReactJs</span>
+            <span>VueJs</span>
         </section>
-        <!--搜索框]]-->
-        <!--搜索结果[[-->
-        <section class="query-result"></section>
-        <!--搜索结果]]-->
-        @@include("html/include/mobileFooterMenu.html")
-        <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
-        <script type="text/javascript">
-            $(function() {
-                $("#query-condition").find(".search-txt").trigger("click").focus();
-            });
-        </script>
-    </body>
+    </section>
+    <!--搜索推荐]]-->
+    <!--搜索结果[[-->
+    <section class="query-result"></section>
+    <!--搜索结果]]-->
+    <!--页脚[[-->
+    @@include("../include/mobileFooter.html")
+    <!--页脚]]-->
+    <!--底部菜单[[-->
+    @@include("../include/mobileFooterMenu.html")
+     <!--底部菜单]]-->
+    <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $("#query-condition").find(".search-txt").trigger("click").focus();
+    });
+    </script>
+</body>
+
 </html>

@@ -2,7 +2,7 @@
 * @Author: dongying
 * @Date:   2017-01-03 10:21:19
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-01-05 14:20:44
+* @Last Modified time: 2017-01-06 14:14:30
 */
 
 @import 'include/global';
@@ -10,9 +10,11 @@ body{
     background:#f3f6f7;
     overflow-x:hidden;
 }
-@import 'include/mobileNav';
-@import 'include/mobileSlider';
-@import 'include/mobileSearch';
-@import 'include/mobileArtList';
-@import 'include/mobileFoot';
-@import 'include/mobileFootMenu';
+@import 'mobile/mobileNav';
+@import 'mobile/mobileSlider';
+@import 'mobile/mobileSearch';
+@import 'mobile/mobileArtList';
+@import 'mobile/mobileFoot';
+@import 'mobile/mobileFootMenu';
+
+@import 'mobile/mobileArtDetails';

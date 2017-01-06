@@ -1,0 +1,63 @@
+/*文章详情页*/
+@import 'helper';
+.article-detail-box{
+    width:92%;
+    margin:0.5rem auto;
+    .meta-info{
+        width:100%;
+        height:0.5rem;
+        line-height: 0.5rem;
+        background-color:#f7f7f7;
+        @include clearfix;
+        span{
+            display: inline-block;
+            padding:0 0.25rem;
+        }
+        .art-type{
+            float:left;
+            background:#e6e6e6;
+        }
+        .art-date{
+            float:right;
+            margin-right:0.5rem;
+        }
+    }
+    h3{
+        font-size:0.5rem;
+        margin-top:0.25rem;
+    }
+    .art-info{
+        color:#333;
+        span{
+            display:inline-block;
+            line-height:0.55rem;
+            margin-right:0.25rem;
+            i{
+                font-style:normal;
+                margin-right:0.1rem;
+                color:#666;
+            }
+        }
+        span.source{
+            display:block;
+            a{
+                color:#333;
+                &:hover{
+                    color:#cd375e;
+                }
+            }
+        }
+    }
+    .art-content{
+        width:100%;
+        margin-top:0.25rem;
+        font-size:0.35rem;
+        text-align:justify;
+        text-align-last:justify;
+        img{
+            width:100%;
+            height:100%;
+            border-radius: 0.1rem;
+        }
+    }
+}
