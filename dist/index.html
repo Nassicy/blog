@@ -11,8 +11,9 @@
 </head>
 
 <body >
+    <!--header--><!--headerend-->
     <header id="header" class="">
-    <div class="navbar-container">
+    <div class="navbar-container clearfix">
         <div class="navbar-header">
             <a href="index.html">
                 <img src="images/logo.gif" alt="logo" />
@@ -20,7 +21,7 @@
         </div>
         <nav class="nav">
             <ul>
-                <li class="nav-item"><a href="index.html" title="首页">首页</a></li>
+                <li class="nav-item active"><a href="index.html" title="首页">首页</a></li>
                 <li class="nav-item"><a href="index.html" title="前端">前端</a></li>
                 <li class="nav-item"><a href="index.html" title="Java">Java</a></li>
                 <li class="nav-item"><a href="index.html" title="数据库">数据库</a></li>
@@ -43,7 +44,6 @@
     </div>
 </header>
 
-    <!-- /header -->
     <main id="main" >
         <section class=" carousel-container">
             <div id="myCarousel" class="carousel slide">
@@ -66,100 +66,102 @@
                 <a class="banner-anchor next" href="#myCarousel" data-slide="next">&rsaquo;</a>
             </div>
         </section>
-        <section class="about-main">
-            <article class="about-left">
-                <h5>一周美文推荐</h5>
-                <h4>理解 Java 垃圾回收机制</h4>
-                <div class="article-content">
-                    <a href="javascript:void(0)">
-                        <img src="images/article.jpg" alt=文章图片"">
-                    </a>
-                    <p>
-                        <span>Sangmin Lee</span>
-                        <span>2016-11-01</span>
-                        <a href="javascript:void(0)">ImportNew</a>
-                    </p>
-                    <div class="art-detail-info">
-                        <p>理解java垃圾回收机制有什么好处呢？作为一个软件工程师，满足自己的好奇心将是一个很好的理由，不过更重要的是，理解GC工作机制可以帮助你写出更好的Java应用程序。</p>
-                        <p>这是我个人的主观观点，但我相信一个人精通了GC，往往会是一个更好的Java程序员。如果你对GC感兴趣，那就意味着你有一定大规模应用开发的经验。如果你已经仔细过考虑选择合适的GC算法，这意味着你完全理解你开发的应用程序的功能。当然，这可能不是一个优秀开发者共同标准。然而，很少有人会反对我说的:理解GC是成为一个伟大的Java开发人员的要求。这是“成为一个Java GC专家”系列文章的第一部分。这次我将讲述GC简介，而在下一篇文章中，我将讨论分析GC状态和来自NHN的GC调优的例子。本文的目的是用简单的方式向你介绍GC。我希望这篇文章被证明是非常有帮助的。事实上，我的同事已经发表了一些关于Java内部机制的大文章，它们已经在推特变得很流行。</p>
+        <section class="outwrap-about">
+            <section class="about-main clearfix">
+                <article class="about-left">
+                    <h5>一周美文推荐</h5>
+                    <h4> <a href="html/article/articleDetails.html">理解 Java 垃圾回收机制</a></h4>
+                    <div class="article-content">
+                        <a href="javascript:void(0)">
+                            <img src="images/article.jpg" alt=文章图片"">
+                        </a>
+                        <p>
+                            <span class="author"><i class="fa fa-pencil-square-o"></i>Sangmin Lee</span>
+                            <span class="published-date"><i class="fa  fa-calendar"></i> 2016-11-01</span>
+                            <a href="javascript:void(0)" class="article-type"><i class="fa  fa-lightbulb-o"></i>ImportNew</a>
+                        </p>
+                        <div class="art-detail-info">
+                            <p>理解java垃圾回收机制有什么好处呢？作为一个软件工程师，满足自己的好奇心将是一个很好的理由，不过更重要的是，理解GC工作机制可以帮助你写出更好的Java应用程序。</p>
+                            <p>这是我个人的主观观点，但我相信一个人精通了GC，往往会是一个更好的Java程序员。如果你对GC感兴趣，那就意味着你有一定大规模应用开发的经验。如果你已经仔细过考虑选择合适的GC算法，这意味着你完全理解你开发的应用程序的功能。当然，这可能不是一个优秀开发者共同标准。然而，很少有人会反对我说的:理解GC是成为一个伟大的Java开发人员的要求。这是“成为一个Java GC专家”系列文章的第一部分。这次我将讲述GC简介，而在下一篇文章中，我将讨论分析GC状态和来自NHN的GC调优的例子。本文的目的是用简单的方式向你介绍GC。我希望这篇文章被证明是非常有帮助的。事实上，我的同事已经发表了一些关于Java内部机制的大文章，它们已经在推特变得很流行。</p>
+                        </div>
                     </div>
-                </div>
-                <div class="article-footer">
-                    <a href="javascript:void(0)" class="read-btn">阅读全文</a>
-                    <ul>
-                        <li><label>分享:</label></li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <i class="fa fa-qq"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <i class="fa fa-wechat"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <i class="fa fa-weibo"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-            <section class="about-right">
-                <div class="about-us s-modules">
-                  <h5>关于网站</h5>
-                  <div class="about-us-content">
-                      <img src="images/tm-img1.jpg" alt="">
-                      <p>本网站是个人网站，为了记录平时在技术道路上采坑的详情。同时也为了程序猿们提供一个讨论吐槽的空间。</p>
-                  </div>
-                </div>
-                <div class="about-tags s-modules">
-                    <h4>
-                        <i class="fa fa-tags"></i>标签
-                    </h4>
-                    <div class="about-tags-content">
-                        <a href="javascript:void(0)" class="tag-item">Java</a>
-                        <a href="javascript:void(0)" class="tag-item">MySql</a>
-                        <a href="javascript:void(0)" class="tag-item">SpringMvc</a>
-                        <a href="javascript:void(0)" class="tag-item">MyBatis</a>
-                        <a href="javascript:void(0)" class="tag-item">CSS3</a>
-                        <a href="javascript:void(0)" class="tag-item">Html5</a>
-                        <a href="javascript:void(0)" class="tag-item">JavaScript</a>
+                    <div class="article-footer">
+                        <a href="javascript:void(0)" class="read-btn">阅读全文</a>
+                        <ul>
+                            <li><label>分享:</label></li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-qq"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-wechat"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div class="about-programmer s-modules">
-                    <h5>程序生活</h5>
-                    <div class="about-programmer-content">
-                    <ul>
-                        <li>
-                            <img src="images/tm-img-100x100-3.jpg" alt="占位符">
-                            <a href="javascript:void(0)">程序员的生活就这样吗 </a>
-                            <span>
-                                硬币有两面，程序员其实也有两极，可能在某些方面迟钝，但在工作中可能瞬间化身犀利哥哦。
-                            </span>
-                        </li>
-                         <li>
-                            <img src="images/tm-img-100x100-6.jpg" alt="占位符">
-                            <a href="javascript:void(0)">程序员的生活就这样吗 </a>
-                            <span>
-                                硬币有两面，程序员其实也有两极，可能在某些方面迟钝，但在工作中可能瞬间化身犀利哥哦。
-                            </span>
-                        </li>
-                         <li>
-                            <img src="images/tm-img-100x100-4.jpg" alt="占位符">
-                            <a href="javascript:void(0)">程序员的生活就这样吗 </a>
-                            <span>
-                                硬币有两面，程序员其实也有两极，可能在某些方面迟钝，但在工作中可能瞬间化身犀利哥哦。
-                            </span>
-                        </li>
-                    </ul>
+                </article>
+                <section class="about-right">
+                    <div class="about-us about-modules">
+                      <h5>关于网站</h5>
+                      <div class="about-us-content">
+                          <img src="images/tm-img1.jpg" alt="">
+                          <p>本网站是个人网站，为了记录平时在技术道路上采坑的详情。同时也为了程序猿们提供一个讨论吐槽的空间。</p>
+                      </div>
                     </div>
-                </div>
+                    <div class="about-tags about-modules">
+                        <h4>
+                            <i class="fa fa-tags"></i>标签
+                        </h4>
+                        <div class="about-tags-content">
+                            <a href="javascript:void(0)" class="tag-item">Java</a>
+                            <a href="javascript:void(0)" class="tag-item">MySql</a>
+                            <a href="javascript:void(0)" class="tag-item">SpringMvc</a>
+                            <a href="javascript:void(0)" class="tag-item">MyBatis</a>
+                            <a href="javascript:void(0)" class="tag-item">CSS3</a>
+                            <a href="javascript:void(0)" class="tag-item">Html5</a>
+                            <a href="javascript:void(0)" class="tag-item">JavaScript</a>
+                        </div>
+                    </div>
+                    <div class="about-programmer about-modules">
+                        <h5>程序生活</h5>
+                        <div class="about-programmer-content">
+                        <ul>
+                            <li>
+                                <img src="images/tm-img-100x100-3.jpg" alt="占位符">
+                                <a href="javascript:void(0)">程序员的生活就这样吗 </a>
+                                <span>
+                                    硬币有两面，程序员其实也有两极，可能在某些方面迟钝，但在工作中可能瞬间化身犀利哥哦。
+                                </span>
+                            </li>
+                             <li>
+                                <img src="images/tm-img-100x100-6.jpg" alt="占位符">
+                                <a href="javascript:void(0)">程序员的生活就这样吗 </a>
+                                <span>
+                                    硬币有两面，程序员其实也有两极，可能在某些方面迟钝，但在工作中可能瞬间化身犀利哥哦。
+                                </span>
+                            </li>
+                             <li>
+                                <img src="images/tm-img-100x100-4.jpg" alt="占位符">
+                                <a href="javascript:void(0)">程序员的生活就这样吗 </a>
+                                <span>
+                                    硬币有两面，程序员其实也有两极，可能在某些方面迟钝，但在工作中可能瞬间化身犀利哥哦。
+                                </span>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </section>
             </section>
         </section>
         <section class="rec-container">
-            <section class="rec-box">
+            <section class="rec-box clearfix">
                 <div class="rec-header rec-first">
                     <i class="box-icon-arrow"></i>
                     <i class="box-icon-first"></i>
@@ -168,7 +170,7 @@
                     <i class="fa fa-chevron-circle-right"></i>
                     </a>
                 </div>
-                <div class="rec-content">
+                <div class="rec-content ">
                     <ul>
                         <li>
                             <img src="images/rec1.png" alt="图片占位">
@@ -191,7 +193,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="rec-box ">
+            <section class="rec-box clearfix">
                 <div class="rec-header rec-second">
                     <i class="box-icon-arrow"></i>
                     <i class="box-icon-second"></i>
@@ -223,7 +225,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="rec-box">
+            <section class="rec-box clearfix">
                 <div class="rec-header rec-third">
                     <i class="box-icon-arrow"></i>
                     <i class="box-icon-third"></i>
@@ -257,7 +259,8 @@
             </section>
         </section>
     </main>
-    <footer id="footer">
+    <!--footer--><!--footerend-->
+    <footer id="footer" class="clearfix">
     <section class="footer-container">
         <ul class="footer-left">
             <li class="friend-link">

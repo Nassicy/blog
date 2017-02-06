@@ -1,18 +1,18 @@
 /*
-Error: Undefined variable: "$left-width".
-        on line 3 of E:\codes\blog\src\sass\modules\aboutLeft.scss
+Error: Undefined variable: "$right-width".
+        on line 3 of E:\codes\blog\src\sass\modules\articleRight.scss
 
-1: >.about-left {
-2:         float: left;
-3:         width: $left-width;
-4:         border-image: url("../images/hr-bg.png");
-5:         h5 {
-6:             width: 100px;
-7:             margin: 10px auto;
-8:             text-align: center;
+1: .article-right{
+2:     float:left;
+3:     width:$right-width;
+4:     margin-left:$right-margin-left;
+5:     .list-content{
+6:         margin:0 0 20px 10px;
+7:         background-color:#fff;
+8:         border:1px solid #ddd;
 
 Backtrace:
-E:\codes\blog\src\sass\modules\aboutLeft.scss:3
+E:\codes\blog\src\sass\modules\articleRight.scss:3
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
@@ -45,10 +45,9 @@ D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
-D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
-D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:404:in `run'
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
 D:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
@@ -59,6 +58,6 @@ D:/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$left-width\".\A         on line 3 of E:\codes\blog\src\sass\modules\aboutLeft.scss\A \A 1: >.about-left {\A 2:         float: left;\A 3:         width: $left-width;\A 4:         border-image: url(\"../images/hr-bg.png\");\A 5:         h5 {\A 6:             width: 100px;\A 7:             margin: 10px auto;\A 8:             text-align: center;"; }
+  content: "Error: Undefined variable: \"$right-width\".\A         on line 3 of E:\codes\blog\src\sass\modules\articleRight.scss\A \A 1: .article-right{\A 2:     float:left;\A 3:     width:$right-width;\A 4:     margin-left:$right-margin-left;\A 5:     .list-content{\A 6:         margin:0 0 20px 10px;\A 7:         background-color:#fff;\A 8:         border:1px solid #ddd;"; }
 
-/*# sourceMappingURL=aboutLeft.css.map */
+/*# sourceMappingURL=articleRight.css.map */

@@ -2,12 +2,13 @@
 * @Author: dongying
 * @Date:   2016-11-03 14:13:19
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-11-04 15:42:41
+* @Last Modified time: 2016-11-23 15:23:28
 */
 body {
   font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
   font-size: 14px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background: #f8f8f8; }
 
 body a {
   outline: none;
@@ -16,6 +17,16 @@ body a {
   -moz-transition: 0.5s all ease;
   -o-transition: 0.5s all ease;
   -ms-transition: 0.5s all ease; }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
 
 div.login-container {
   position: absolute;
@@ -65,7 +76,8 @@ div.login-html {
     min-height: 345px;
     position: relative;
     perspective: 1000px;
-    transform-style: preserve-3d; }
+    transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d; }
     div.login-html > div.login-form div.sign-in-box,
     div.login-html > div.login-form div.sign-up-box {
       position: absolute;
@@ -106,6 +118,7 @@ div.login-html {
       color: #999;
       transition: 0.2s ease all;
       -moz-transition: 0.2s ease all;
+      -ms-transition: 0.2s ease all;
       -webkit-transition: 0.2s ease all; }
     div.login-html div.login-form div.group .input:focus {
       border-bottom: 2px solid #03a9f5;
@@ -152,4 +165,9 @@ div.login-html {
     border-color: #03a9f5;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    -ms-background-size: 11px auto;
     background-size: 11px auto; }
+
+/*# sourceMappingURL=login.css.map */
+
+/*# sourceMappingURL=login.css.map */

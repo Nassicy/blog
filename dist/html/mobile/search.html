@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>搜索页面</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="Keywords" content="个人博客,blog,java,html5,css3">
+    <link rel="stylesheet" type="text/css" href="../../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mobile.css">
+    <script type="text/javascript" src="../../js/flexible.js"></script>
+</head>
+
+<body>
+    <!--搜索框[[-->
+    <section class="search-box title-box" id="query-condition">
+        <a href="javascript:void(0)" onClick="javascript:history.go(-1);"><i class="fa  fa-angle-left"></i></a>
+        <input type="text" class="search-txt" placeholder="请输入关键字" name="" />
+        <i class="fa fa-search"></i>
+    </section>
+    <!--搜索框]]-->
+    <!--搜索推荐[[-->
+    <section class="query-intro">
+        <h3>推荐搜索标签:</h3>
+        <section class="tag-box">
+            <span>Java</span>
+            <span>Jquery</span>
+            <span>MySql</span>
+            <span>Html5</span>
+            <span>Angularjs</span>
+            <span>SpringMVC</span>
+            <span>ReactJs</span>
+            <span>VueJs</span>
+        </section>
+    </section>
+    <!--搜索推荐]]-->
+    <!--搜索结果[[-->
+    <section class="query-result"></section>
+    <!--搜索结果]]-->
+    <!--页脚[[-->
+    <!--页脚[[-->
+<section class="footer-box">
+    <h2><a href="#slider">回到顶部<i class="fa fa-caret-up"></i></a></h2>
+    <section class="icp-box">
+        <p>Copyright &copy;2016 遇见更好地自己</p>
+    </section>
+</section>
+<!--页脚]]-->
+
+    <!--页脚]]-->
+    <!--底部菜单[[-->
+    <!--底部菜单[[-->
+<footer>
+    <ul>
+        <li class="active">
+            <a href="javascript:void(0)">
+                <i class="fa fa-home"></i>
+                <span>首页</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <i class="fa  fa-list"></i>
+                <span>列表</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <i class="fa fa-search"></i>
+                <span>搜索</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <i class="fa fa-user"></i>
+                <span>我的</span>
+            </a>
+        </li>
+    </ul>
+</footer>
+<!--底部菜单]]-->
+
+     <!--底部菜单]]-->
+    <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $("#query-condition").find(".search-txt").trigger("click").focus();
+    });
+    </script>
+</body>
+
+</html>

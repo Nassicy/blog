@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>文章详情页</title>
+        <link rel="stylesheet" type="text/css" href="../../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/layout.css">
+    </head>
+    <body>
+        <header id="header" class="">
+    <div class="navbar-container clearfix">
+        <div class="navbar-header">
+            <a href="index.html">
+                <img src="images/logo.gif" alt="logo" />
+            </a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li class="nav-item active"><a href="index.html" title="首页">首页</a></li>
+                <li class="nav-item"><a href="index.html" title="前端">前端</a></li>
+                <li class="nav-item"><a href="index.html" title="Java">Java</a></li>
+                <li class="nav-item"><a href="index.html" title="数据库">数据库</a></li>
+                <li class="nav-item"><a href="index.html" title="关于我">关于我</a></li>
+                <!-- 搜索按钮[[ -->
+                <li class="search nav-item">
+                    <a class="searchLink">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="search here.." class="searchWhat">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="login" href="html/login/login.html">登录</a>
+                </li>
+                <li class="nav-item">
+                    <a class="login" href="html/login/login.html">注册</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main id="main">
+            <section class="article-list-img-content art-details-img-content">
+            </section>
+            <section class="article-container clearfix">
+                <div class="art-details-left">
+                    <article class="art-details-content">
+                        <h4>Java回收机制</h4>
+                         <p>
+                            <span class="author"><i class="fa fa-pencil-square-o"></i>Sangmin Lee</span>
+                            <span class="published-date"><i class="fa  fa-calendar"></i> 2016-11-01</span>
+                            <a href="javascript:void(0)" class="article-type"><i class="fa  fa-lightbulb-o"></i>ImportNew</a>
+                        </p>
+                        <div class="art-details-info">
+                            <p>理解java垃圾回收机制有什么好处呢？作为一个软件工程师，满足自己的好奇心将是一个很好的理由，不过更重要的是，理解GC工作机制可以帮助你写出更好的Java应用程序。</p>
+                            <p>这是我个人的主观观点，但我相信一个人精通了GC，往往会是一个更好的Java程序员。如果你对GC感兴趣，那就意味着你有一定大规模应用开发的经验。如果你已经仔细过考虑选择合适的GC算法，这意味着你完全理解你开发的应用程序的功能。当然，这可能不是一个优秀开发者共同标准。然而，很少有人会反对我说的:理解GC是成为一个伟大的Java开发人员的要求。这是“成为一个Java GC专家”系列文章的第一部分。这次我将讲述GC简介，而在下一篇文章中，我将讨论分析GC状态和来自NHN的GC调优的例子。本文的目的是用简单的方式向你介绍GC。我希望这篇文章被证明是非常有帮助的。事实上，我的同事已经发表了一些关于Java内部机制的大文章，它们已经在推特变得很流行。</p>
+                            <p>这是我个人的主观观点，但我相信一个人精通了GC，往往会是一个更好的Java程序员。如果你对GC感兴趣，那就意味着你有一定大规模应用开发的经验。如果你已经仔细过考虑选择合适的GC算法，这意味着你完全理解你开发的应用程序的功能。当然，这可能不是一个优秀开发者共同标准。然而，很少有人会反对我说的:理解GC是成为一个伟大的Java开发人员的要求。这是“成为一个Java GC专家”系列文章的第一部分。这次我将讲述GC简介，而在下一篇文章中，我将讨论分析GC状态和来自NHN的GC调优的例子。本文的目的是用简单的方式向你介绍GC。我希望这篇文章被证明是非常有帮助的。事实上，我的同事已经发表了一些关于Java内部机制的大文章，它们已经在推特变得很流行。</p>
+                        </div>
+                    </article>
+                    <div class="comment-container"></div>
+                </div>
+                <div class="article-right clearfix">
+    <aside class="list-content search-container">
+        <h2><i class="fa fa-tag"></i><span>快速搜索</span></h2>
+        <div class="search-group">
+            <input type="text" name="">
+            <span class="fa fa-search"></span>
+        </div>
+    </aside>
+    <aside class="tags-list list-content">
+        <h2><i class="fa fa-tag"></i><span>前端</span></h2>
+        <div class="tags-content">
+            <a href="javascript:void(0)" class="tag-item">Html5</a>
+            <a href="javascript:void(0)" class="tag-item">Jquery</a>
+            <a href="javascript:void(0)" class="tag-item">CSS3</a>
+            <a href="javascript:void(0)" class="tag-item">Html5</a>
+            <a href="javascript:void(0)" class="tag-item">JavaScript</a>
+        </div>
+    </aside>
+    <aside class="month-ranking-list list-content">
+        <h2><i class="fa fa-list"></i><span>月排行榜</span></h2>
+        <ul>
+            <li>
+                <span>1</span><a href="javascript:void(0)">数据库备份那点事儿</a>
+            </li>
+            <li>
+                <span>2</span><a href="javascript:void(0)">数据库备份那点事儿</a>
+            </li>
+            <li>
+                <span>3</span><a href="javascript:void(0)">数据库备份那点事儿</a>
+            </li>
+            <li>
+                <span>4</span><a href="javascript:void(0)">数据库备份那点事儿</a>
+            </li>
+            <li>
+                <span>5</span><a href="javascript:void(0)">数据库备份那点事儿</a>
+            </li>
+            <li>
+                <span>6</span><a href="javascript:void(0)">数据库备份那点事儿</a>
+            </li>
+            <li>
+                <span>7</span><a href="javascript:void(0)">数据库备份那点事儿</a>
+            </li>
+            <li>
+                <span>8</span><a href="javascript:void(0)">数据库备份那点事儿</a>
+            </li>
+            <li>
+                <span>9</span><a href="javascript:void(0)">数据库备份那点事儿</a>
+            </li>
+            <li>
+                <span>10</span><a href="javascript:void(0)">数据库备份那点事儿</a>
+            </li>
+        </ul>
+    </aside>
+    <aside class="latest-list list-content">
+        <h2><i class="fa  fa-laptop"></i><span>最新文章</span></h2>
+        <ul>
+            <li>
+                <a href="javascript:void(0)">双十一零点创建订单失败的提示最后几个字是什么意思？FANG XUE FENG</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">双十一零点创建订单失败的提示最后几个字是什么意思？FANG XUE FENG</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">双十一零点创建订单失败的提示最后几个字是什么意思？FANG XUE FENG</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">双十一零点创建订单失败的提示最后几个字是什么意思？FANG XUE FENG</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">双十一零点创建订单失败的提示最后几个字是什么意思？FANG XUE FENG</a>
+            </li>
+        </ul>
+    </aside>
+</div>
+
+            </section>
+        </main>
+        <footer id="footer" class="clearfix">
+    <section class="footer-container">
+        <ul class="footer-left">
+            <li class="friend-link">
+                <label>友情链接:</label>
+                <a href="http://www.imooc.com/">慕课网</a>
+            </li>
+            <li>
+                <p>Copyright &copy;2016 遇见更好地自己</p>
+            </li>
+        </ul>
+        <ul class="footer-right">
+            <li>
+                <i class="fa fa-qq"></i>
+                <a href="javascript:void(0)">548754290</a>
+            </li>
+            <li>
+                <i class="fa fa-weibo"></i>
+                <a href="javascript:void(0)">548754290@qq.com</a>
+            </li>
+            <li>
+                <i class="fa  fa-github"></i>
+                <a href="javascript:void(0)">https://github.com/Nassicy</a>
+            </li>
+        </ul>
+    </section>
+</footer>
+
+    </body>
+    <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+</html>
